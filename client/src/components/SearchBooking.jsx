@@ -30,7 +30,7 @@ const SearchBooking = ({trip1,handletrip1}) => {
  <div className='w-[100%] h-screen relative'>
      <div className={loading ?'blur-md':'w-[100%] h-screen' }>
     <img className='bg-cover w-[100%] h-screen brightness-50'src="https://wallpapercave.com/wp/wp5240523.jpg" alt="plane" />
-      <div className='w-[100%] h-screen absolute top-[30%]'>
+      <div className='w-[100%] h-screen absolute top-0 lg:top-[30%]'>
 
         <div className='w-[100%] h-screen flex justify-center items-center'>
          <div className='w-[100%] flex h-screen justify-center item-center'>
@@ -39,7 +39,7 @@ const SearchBooking = ({trip1,handletrip1}) => {
             <p>Flights</p>
             <GiCommercialAirplane/>
           </div>
-          <div className='w-[100%] bg-white h-[250px]'>
+          <div className='w-[100%] bg-white  sm:h-[500px] md:h-[250px]'>
           <Contents handleSubmit={handleSubmit} trip1={trip1} handletrip1={handletrip1}/>
           </div>
       

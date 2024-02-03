@@ -12,6 +12,9 @@ const Home = ({trip1,handletrip1}) => {
     {/* <About/> */}
     <Review/>
     <Footer/>
+    {/* <div className=''>
+
+    </div> */}
     </div>
   )
 }
