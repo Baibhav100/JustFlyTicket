@@ -15,7 +15,7 @@ const Navbar = () => {
     <div className='  w-full h-20 z-20 shadow-xl top-0 left-0 bg-[#1f2937] 'id='1'>
       <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
       <div className='flex'>
-      <h2 className='sm:text-2xl md:text-3xl text-xl text-white font-bold'><Link to="/">JustFlyTickets</Link></h2>
+      <h2 className='sm:text-2xl md:text-3xl text-xl text-white font-bold'><Link to="/">JustFlyTicket</Link></h2>
        <div className='text-white transform rotate-90'><MdOutlineAirplanemodeActive /></div>
       </div>
         <div>
