@@ -23,7 +23,7 @@ const Navbar = () => {
               <div className='flex w-[100%] justify-center items-center gap-2'>
                 <p className='text-white text-[9px] text-center'>contact us at</p>
                  
-                 <p className='text-3xl font-bold text-red-600'>1-000-000-0000</p>
+                 <p className='text-xl md:text-2xl lg:text-3xl font-bold text-red-600'>1-000-000-0000</p>
                 
                 </div>        
               <li className='ml-10 text-small hover:border-b text-white cursor-pointer'><Link to='/'>Home</Link></li>

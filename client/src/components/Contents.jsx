@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import Main from './Main';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 // import './YourComponent.css'; // Import your Tailwind CSS styles
 
-const Contents= ({handleSubmit,handletrip1,trip1}) => {
+const Contents= ({handletrip1,trip1}) => {
   const [startDate,setstartdate]=useState('');
   const [passenger,setpassenger]=useState('');
   const [endDate,setenddate]=useState('');
   const [allTerms, setAllTerms] = useState([]);
   const [dallTerms, dsetAllTerms] = useState([]);
+  const navigate = useNavigate();
+  const handleSubmit = () => {
+    navigate('/loading'); 
+  }
   useEffect(() => {
     // Fetch and parse data from the text file
     fetch('Airports.txt')
@@ -134,7 +140,7 @@ const dhandleSelectSuggestion = (dselectedTerm) => {
           </div>
         </div>
         <div className=' flex w-[100%] justify-end p-9'>
-          <button type='submit' className='w-[150px] h-[35px] bg-[#1f2937] text-white cursor-pointer'>Search</button>
+          <button  className='w-[150px] h-[35px] bg-[#1f2937] text-white cursor-pointer'><Link to='/loading'>Search</Link></button>
         </div>
    </form>
 

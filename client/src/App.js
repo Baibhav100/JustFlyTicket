@@ -13,6 +13,7 @@ import Contact from './components/Contact';
 import SearchBooking from './components/SearchBooking';
 import { useState } from 'react';
 import Details from './components/Details';
+import Loading from './components/Loading';
 // import Newsletter from './components/Newsletter';
 // import Services from './components/Services';
 // import Login from './components/Login';
@@ -42,6 +43,8 @@ function App() {
     <Route path='/contact' element={<Contact/>}/>
     <Route path='/search-booking' element={<SearchBooking trip1={trip1} handletrip1={handletrip1}/>}/>
     <Route path='/details' element={<Details trip1={trip1}/>}/>
+    <Route path='/loading' element={<Loading/>}/>
+
 
    </Routes>
   

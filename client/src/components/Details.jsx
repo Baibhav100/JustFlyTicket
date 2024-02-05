@@ -248,35 +248,27 @@ const dhandleSelectSuggestion = (dselectedTerm) => {
 <div className='flex w-[100%] justify-center items-center'>
   
 <div className=' lg:flex lg:w-[70%] justify-center lg:justify-between gap-20'>
-<div className=' text-center  items-center mt-4'>
+<div className=' text-center items-center mt-4'>
         {/* <img className='W-[420px] h-[430px] transform transition duration-500 hover:scale-110'src={require('../images/traveling.png')} alt="" /> */}
         <div className='flex w-[300px] justify-between items-center'>
         <p className='text-3xl'>JFK</p>
         {trip1=="roundtrip"? <HiOutlineArrowsRightLeft/>:<HiOutlineArrowLongRight/>}   
         <p className='text-3xl'>CUN</p>
     </div>
-        <div className='w-[300px] h-[400px] bg-gray-100 mb-[10px]'>
+        <div className='w-[300px] h-[400px] bg-blue-900/50 mb-[10px] flex justify-center '>
+          <div>
+          <h2 className='text-md font-semibold text-white'>Fares at discounted prices!</h2>
+          <div className='rounded-md bg-yellow-300 mt-2'> Call For Bookings</div>
+          <div className='flex w-[100%] h-[200px] justify-between items-center'>
+            <p className='text-md text-red-500 line-through'>$499</p>
+            <p className='text-4xl text-white font-semibold'>$200 <sup>*</sup></p>
+                      
+            </div>
+          </div>
 
         </div>
       </div>
    <div className='w-[100%] bg-gray-100 p-10'>
-  
-   {/* <div id='#1'>
-      <div>
-        <div className="container mx-auto py-3"> */}
-
-    {/* <label for="selectOptions" className="block text-sm font-medium text-gray-600">Select Trip</label> */}
-    {/* <div className="inline-block w-full text-gray-700"> */}
-      {/* <select id="selectOptions" name="selectOptions" value={trip} onChange={handletrip} className="mt-1 p-2 w-[200px] border rounded-md">
-      {/* <option value="">Select Trip</option> */}
-      {/* {trip1 == 'oneway' && <option value="oneway">One Way</option>}
-      {trip1 == 'roundtrip' && <option value="roundtrip">Round Trip</option>}
-      </select> */}
-    {/* </div> */}
-  {/* </div>
-      </div>
-     </div> */}
-
       <form>
       
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -346,6 +338,7 @@ const dhandleSelectSuggestion = (dselectedTerm) => {
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-600">Email</label>
             {/* <input type="number" id="number" name="passengers" className="mt-1 p-2 w-full border rounded-md"/> */}
+            <input type="email" id="num" name="email" value={email} onChange={(e)=>setemail(e.target.value)} className="mt-1 p-2 w-full border rounded-md"/>
           
           </div>
 
@@ -360,6 +353,7 @@ const dhandleSelectSuggestion = (dselectedTerm) => {
   
 </div>
     </div>
+    <Footer/>
 </>
   )
 }

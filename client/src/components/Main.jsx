@@ -4,6 +4,7 @@ import Pop from './Pop';
 import Pop2 from './Pop2';
 import SearchBooking from './SearchBooking';
 import Aeroplane from './Aeroplane';
+// import Ripple from './Ripple';
 
 const Main = ({trip1,handletrip1}) => {
   console.log('trip1 in main:', trip1);
@@ -112,7 +113,9 @@ const dhandleSelectSuggestion = (dselectedTerm) => {
   return (
 
 <div>
+  <div className='hidden lg:block'>
   <Aeroplane/>
+  </div>
 <div className='flex w-[100%] justify-center items-center '>
 <div className='w-[100%] flex justify-center items-center'>
 <img className='w-[70%] text-center bg-contain sm:h-200px md:h-[400px] lg:h-[700px]'src={require('../images/banner.jpeg')} alt=""/>
@@ -260,7 +263,7 @@ const dhandleSelectSuggestion = (dselectedTerm) => {
 
   </div>
   <div>
-    <button className='fixed z-10 right-[2%] top-[80%] ml-9 text-small uppercase animate-bounce bg-[#C70039] rounded-[50%] p-4  text-white hover:border-b'><a href="tel:+919365163250">< AiOutlinePhone size={30}/></a></button>
+    <button className='fixed z-10 right-[2%] top-[80%] ml-9 text-small uppercase animate-bounce bg-[#C70039] rounded-[50%] p-4  text-white hover:border-b'><a href="tel:+919365163250">< AiOutlinePhone size={30}/></a></button>s 
   </div>
 </div>
   
