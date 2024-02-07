@@ -13,7 +13,7 @@ const Loading = () => {
     }, 4000);
     return () => clearTimeout(timeout);
   }, []);
-  // navigate('/details'); 
+  navigate('/details'); 
   return (
   <>
   <div className=' flex h-[500px] w-[100%] justify-center items-center'>
@@ -21,10 +21,9 @@ const Loading = () => {
     <img src={require("../images/flight.png")} alt="" />
    
   </div>
-   
   <div>
     <img className='w-[100%] h-[500px]' src={require("../images/travel.png")} alt="" />
-    </div>
+  </div>
   <Footer/>
   </>
 

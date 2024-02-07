@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Main from './Main';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router';
+import Details from './Details';
 // import './YourComponent.css'; // Import your Tailwind CSS styles
 
 const Contents= ({handletrip1,trip1}) => {
@@ -26,7 +27,7 @@ const Contents= ({handletrip1,trip1}) => {
       }); 
   }, []);
   //
-  const handleInputChange = (event) => {
+  const handleInputChange= (event) => {
     const value = event.target.value;
     setSearchTerm(value);
 
@@ -90,7 +91,7 @@ const dhandleSelectSuggestion = (dselectedTerm) => {
         <div>
             <label htmlFor="departure" className="block text-sm font-medium text-gray-600">Departure</label>
             <input type="text" id="departure" name="departure" value={searchTerm} onChange={handleInputChange} className="mt-1 p-2 w-full border rounded-md"/>
-        <div className='bg-[#1f2937] w-[200px] z-10 mt-3 absolute'>
+        <div className='bg-[rgb(31,41,55)] w-[200px] z-10 mt-3 absolute'>
         <ul className={showSuggestions && searchTerm?"h-20 text-white overflow-y-auto border p-4":'hidden'}>
         { searchTerm && suggestions.map((term, index) => ( 
       <section className={handleInputChange?'flex cursor-pointer text-center':'hidden'} key={index} onClick={() => handleSelectSuggestion(term)}>
@@ -143,7 +144,10 @@ const dhandleSelectSuggestion = (dselectedTerm) => {
           <button  className='w-[150px] h-[35px] bg-[#1f2937] text-white cursor-pointer'><Link to='/loading'>Search</Link></button>
         </div>
    </form>
-
+  <div className='hidden'>
+    <Details trip1={trip1} handleInputChange={handleInputChange} searchTerm={searchTerm}
+    />
+  </div>
   </div>
 
 

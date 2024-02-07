@@ -28,6 +28,7 @@ function App() {
   const handletrip=(e)=>{
     settrip(e.target.value);
   }
+
   return (
     <div className="App">
     <Blackscreen/>
@@ -42,7 +43,7 @@ function App() {
     <Route path='/about' element={<About1/>}/>
     <Route path='/contact' element={<Contact/>}/>
     <Route path='/search-booking' element={<SearchBooking trip1={trip1} handletrip1={handletrip1}/>}/>
-    <Route path='/details' element={<Details trip1={trip1}/>}/>
+    <Route path='/details' element={<Details trip1={trip1} />}/>
     <Route path='/loading' element={<Loading/>}/>
 
 

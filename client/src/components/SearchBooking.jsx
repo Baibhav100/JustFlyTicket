@@ -7,21 +7,6 @@ import Loading from './Loading';
 // import Main from './Main';
 
 const SearchBooking = ({trip1,handletrip1}) => {
-  // const [loading, setLoading] = useState(false);
-  //   const navigate = useNavigate();
-  //   const handleSubmit = async (event) => {
-  //     event.preventDefault();
-  
-  //     setLoading(true);
-  
-  //     // Simulate an asynchronous operation
-  //     await new Promise(resolve => setTimeout(resolve, 2000));
-  
-  //     setLoading(false);
-  
-  //     // Use navigate instead of push for navigation
-  //     navigate('/details'); // Replace '/new-page' with the actual path you want to redirect to
-  //   };
   return (
  <div className='w-[100%] h-screen relative'>
     <div>
