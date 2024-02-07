@@ -3,7 +3,10 @@ import Pop2 from './Pop2';
 import { HiOutlineArrowLongRight, HiOutlineArrowsRightLeft } from 'react-icons/hi2';
 import Footer from './Footer';
 
-const Details = ({trip1}) => {
+const Details = ({trip1, searchTerm ,suggestions ,startDate, setstartdate, endDate, setenddate,
+  showSuggestions ,dshowSuggestions ,dsearchTerm, dsuggestions,
+   dhandleSelectSuggestion ,handleSelectSuggestion,
+  allTerms, setAllTerms ,dallTerms, dsetAllTerms,dhandleInputChange, handleInputChange}) => {
     const [isEmailSent,setIsEmailSent]=useState(false);
     //
     const generateCode = () => {
@@ -20,8 +23,8 @@ const Details = ({trip1}) => {
     };
     const alphanumericCode = generateCode();
     //sending email
-    const [startDate,setstartdate]=useState('');
-    const [endDate,setenddate]=useState('');
+    // const [startDate,setstartdate]=useState('');
+    // const [endDate,setenddate]=useState('');
     const sendemail=async(e)=>{
       e.preventDefault();
       const res= await fetch('/customer',{
@@ -51,9 +54,7 @@ const Details = ({trip1}) => {
   const [passenger,setpassenger]=useState('');
   const [email,setemail]=useState('');
   const [user,setuser]=useState('');
-  const [num,setnum]=useState('')
-    const [allTerms, setAllTerms] = useState([]);
-    const [dallTerms, dsetAllTerms] = useState([]);
+  const [num,setnum]=useState('');
     //
     useEffect(() => {
       // Fetch and parse data from the text file
@@ -67,91 +68,53 @@ const Details = ({trip1}) => {
         }); 
     }, []);
     
-  const handleInputChange = (event) => {
-    const value = event.target.value;
-    setSearchTerm(value);
-
-    // Filter suggestions based on the input
-    const filteredSuggestions = allTerms.filter(term =>
-      term.toLowerCase().includes(value.toLowerCase())
-    );
-
-    setSuggestions(filteredSuggestions);
-    // Show suggestions div
-    setShowSuggestions(true);
-  };
-  
-  const [dsuggestions, dsetSuggestions] = useState([]);
-  const [dsearchTerm, dsetSearchTerm] = useState('');
-  const dhandleInputChange = (event) => {
-    const value = event.target.value;
-    dsetSearchTerm(value);  
-
-    // Filter suggestions based on the input
-    const filteredSuggestions = dallTerms.filter(term =>
-      term.toLowerCase().includes(value.toLowerCase())
-    );
-
-    dsetSuggestions(filteredSuggestions);
-    dsetShowSuggestions(true);
-  };
-  //
-  //searching 
-  const [showSuggestions, setShowSuggestions] = useState(true);
-  const [dshowSuggestions, dsetShowSuggestions] = useState(true);
- const [searchTerm, setSearchTerm] = useState('');
- const [suggestions, setSuggestions] = useState([]);
-
-const handleSelectSuggestion = (selectedTerm) => {
-  setSearchTerm(selectedTerm);
-
-  setSuggestions([]);
-  setShowSuggestions(false);
-
-};
-const dhandleSelectSuggestion = (dselectedTerm) => {
-  dsetSearchTerm(dselectedTerm);
-  dsetSuggestions([]);
-  dsetShowSuggestions(false);
-};
-//   const [slide,setSlide]=useState(false);
-//   const handleslide=()=>{
-//     setSlide(!slide);
-//   }
-
-//   // conditions
-//   const [trip,settrip]=useState('');
-//   const handletrip=(e)=>{
-//     settrip(e.target.value);
-//   }
+  // conditions
+  const [trip,settrip]=useState('');
+  const handletrip=(e)=>{
+    settrip(e.target.value);
+  }
   return (
+
 <>
-<div className="bg-white p-6 rounded-md shadow-md ">
-<div className='flex w-[100%] justify-center items-center'>
+<div className="bg-white p-6 rounded-md shadow-md flex justify-center items-center w-[100%] ">
+<div className='flex w-[100%] justify-center items-center mt-[34px]'>
   
-<div className=' lg:flex lg:w-[70%] justify-center lg:justify-between gap-20'>
+<div className=' lg:flex lg:w-[80%] justify-center lg:justify-between gap-20'>
 <div className=' text-center items-center mt-4'>
         {/* <img className='W-[420px] h-[430px] transform transition duration-500 hover:scale-110'src={require('../images/traveling.png')} alt="" /> */}
-        <div className='flex w-[300px] justify-between items-center'>
-        <p className='text-3xl text-black'>{searchTerm?searchTerm.slice(0,3):'From'}</p>
+        <div className='flex w-[300px] lg:w-[400px] justify-between items-center p-6'>
+        <div>
+        <p className='text-3xl font-bold'>{searchTerm? searchTerm.slice(0,3):'From'}</p>
+        <p className='text-gray-800 text-[10px]'>{searchTerm? searchTerm.slice(4,60):''}</p>
+        </div>
         {trip1=="roundtrip"? <HiOutlineArrowsRightLeft/>:<HiOutlineArrowLongRight/>}   
-        <p className='text-3xl'>CUN</p>
+      <div>
+      <p className='text-3xl font-bold'>{dsearchTerm? dsearchTerm.slice(0,3):'To'}</p>
+      <p className='text-gray-800 text-[10px]'>{dsearchTerm? dsearchTerm.slice(4,60):''}</p>
+      </div>
     </div>
-        <div className='w-[300px] h-[400px] bg-blue-900/50 mb-[10px] flex justify-center '>
-          <div>
+        <div className=' w-[300px] lg:w-[400px] h-[400px] bg-[#00478a] mb-[10px] flex justify-center '>
+          <div className='mt-9 w-[100%]'>
           <h2 className='text-md font-semibold text-white'>Fares at discounted prices!</h2>
-          <div className='rounded-md bg-yellow-300 mt-2'> Call For Bookings</div>
-          <div className='flex w-[100%] h-[200px] justify-between items-center'>
+         <div className='w-[100%] flex justify-center'>
+         <div className='rounded-md p-2 mt-2 bg-white text-gray-900 w-[60%]'> Call For Bookings</div>
+         </div>
+          <div className='flex w-[100%] h-[100px] mt-[40%] justify-between items-center bg-white'>
             <p className='text-md text-red-500 line-through'>$499</p>
-            <p className='text-4xl text-white font-semibold'>$200 <sup>*</sup></p>
+            <p className='text-5xl text-yellow font-bold'>$200 <sup>*</sup></p>
+           
                       
             </div>
           </div>
 
         </div>
       </div>
-   <div className='w-[100%] bg-gray-100 p-10'>
-      <form>
+   <div className='w-[100%] bg-gray-100 p-7'>
+    <div className='justify-between flex text-white w-[100%] bg-[#1f2937] rounded-md p-4'>
+      <p className='md:text-xl lg:text-2xl'>Call Now</p>
+      <p>1-(000)-(000)-(0000)</p>
+    </div>
+      <form className='mt-7'>
       
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
           <div>
@@ -227,7 +190,7 @@ const dhandleSelectSuggestion = (dselectedTerm) => {
         </div> 
 
      
-        <button type="submit" onClick={sendemail} className="bg-[#255eaa] w-[100%] text-white py-2 px-4 rounded-md hover:bg-blue-600 transition">Book</button>
+        <button type="submit" onClick={sendemail} className="bg-[#1f2937] w-[100%] text-white py-2 px-4 rounded-md hover:bg-[#1f2937]/90 transition">Book</button>
         <Pop2 alphanumericCode={alphanumericCode} isOpen={isEmailSent} onClose={closeModal}/>
       </form>
    </div>

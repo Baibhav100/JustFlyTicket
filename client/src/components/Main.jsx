@@ -6,8 +6,12 @@ import SearchBooking from './SearchBooking';
 import Aeroplane from './Aeroplane';
 // import Ripple from './Ripple';
 
-const Main = ({trip1,handletrip1}) => {
-  console.log('trip1 in main:', trip1);
+const Main = ({trip1,handletrip1, searchTerm ,suggestions ,
+  startDate, setstartdate, endDate, setenddate,
+  showSuggestions ,dshowSuggestions ,dsearchTerm, dsuggestions,
+   dhandleSelectSuggestion ,handleSelectSuggestion,
+  allTerms, setAllTerms ,dallTerms, dsetAllTerms,dhandleInputChange, handleInputChange}) => {
+  // console.log('trip1 in main:', trip1);
   const [isEmailSent,setIsEmailSent]=useState(false);
   //
   const generateCode = () => {
@@ -34,79 +38,79 @@ const Main = ({trip1,handletrip1}) => {
       });
     }
   };
-  //sending email
-const [startDate,setstartdate]=useState('');
-const [endDate,setenddate]=useState('');
-const [passenger,setpassenger]=useState('');
-const [email,setemail]=useState('');
-const [user,setuser]=useState('');
-const [num,setnum]=useState('')
-  const [allTerms, setAllTerms] = useState([]);
-  const [dallTerms, dsetAllTerms] = useState([]);
-  //
-  useEffect(() => {
-    // Fetch and parse data from the text file
-    fetch('Airports.txt')
-      .then(response => response.text())
-      .then(data => {
-        const parsedData = data.split('\n').filter(term => term.trim() !== '');
-        setAllTerms(parsedData);
-        dsetAllTerms(parsedData);
+//   //sending email
+// const [startDate,setstartdate]=useState('');
+// const [endDate,setenddate]=useState('');
+// const [passenger,setpassenger]=useState('');
+// const [email,setemail]=useState('');
+// const [user,setuser]=useState('');
+// const [num,setnum]=useState('')
+//   const [allTerms, setAllTerms] = useState([]);
+//   const [dallTerms, dsetAllTerms] = useState([]);
+//   //
+//   useEffect(() => {
+//     // Fetch and parse data from the text file
+//     fetch('Airports.txt')
+//       .then(response => response.text())
+//       .then(data => {
+//         const parsedData = data.split('\n').filter(term => term.trim() !== '');
+//         setAllTerms(parsedData);
+//         dsetAllTerms(parsedData);
 
-      }); 
-  }, []);
+//       }); 
+//   }, []);
 
-  const handleInputChange = (event) => {
-    const value = event.target.value;
-    setSearchTerm(value);
+//   const handleInputChange = (event) => {
+//     const value = event.target.value;
+//     setSearchTerm(value);
 
-    // Filter suggestions based on the input
-    const filteredSuggestions = allTerms.filter(term =>
-      term.toLowerCase().includes(value.toLowerCase())
-    );
+//     // Filter suggestions based on the input
+//     const filteredSuggestions = allTerms.filter(term =>
+//       term.toLowerCase().includes(value.toLowerCase())
+//     );
 
-    setSuggestions(filteredSuggestions);
-    // Show suggestions div
-    setShowSuggestions(true);
-  };
-  //
-  const [dsuggestions, dsetSuggestions] = useState([]);
-  const [dsearchTerm, dsetSearchTerm] = useState('');
-  const dhandleInputChange = (event) => {
-    const value = event.target.value;
-    dsetSearchTerm(value);  
+//     setSuggestions(filteredSuggestions);
+//     // Show suggestions div
+//     setShowSuggestions(true);
+//   };
+//   //
+//   const [dsuggestions, dsetSuggestions] = useState([]);
+//   const [dsearchTerm, dsetSearchTerm] = useState('');
+//   const dhandleInputChange = (event) => {
+//     const value = event.target.value;
+//     dsetSearchTerm(value);  
 
-    // Filter suggestions based on the input
-    const filteredSuggestions = dallTerms.filter(term =>
-      term.toLowerCase().includes(value.toLowerCase())
-    );
+//     // Filter suggestions based on the input
+//     const filteredSuggestions = dallTerms.filter(term =>
+//       term.toLowerCase().includes(value.toLowerCase())
+//     );
 
-    dsetSuggestions(filteredSuggestions);
-    dsetShowSuggestions(true);
-  };
-  //
-  //searching 
-  const [showSuggestions, setShowSuggestions] = useState(true);
-  const [dshowSuggestions, dsetShowSuggestions] = useState(true);
- const [searchTerm, setSearchTerm] = useState('');
- const [suggestions, setSuggestions] = useState([]);
+//     dsetSuggestions(filteredSuggestions);
+//     dsetShowSuggestions(true);
+//   };
+//   //
+//   //searching 
+//   const [showSuggestions, setShowSuggestions] = useState(true);
+//   const [dshowSuggestions, dsetShowSuggestions] = useState(true);
+//  const [searchTerm, setSearchTerm] = useState('');
+//  const [suggestions, setSuggestions] = useState([]);
 
-const handleSelectSuggestion = (selectedTerm) => {
-  setSearchTerm(selectedTerm);
+// const handleSelectSuggestion = (selectedTerm) => {
+//   setSearchTerm(selectedTerm);
 
-  setSuggestions([]);
-  setShowSuggestions(false);
+//   setSuggestions([]);
+//   setShowSuggestions(false);
 
-};
-const dhandleSelectSuggestion = (dselectedTerm) => {
-  dsetSearchTerm(dselectedTerm);
-  dsetSuggestions([]);
-  dsetShowSuggestions(false);
-};
-  const [slide,setSlide]=useState(false);
-  const handleslide=()=>{
-    setSlide(!slide);
-  }
+// };
+// const dhandleSelectSuggestion = (dselectedTerm) => {
+//   dsetSearchTerm(dselectedTerm);
+//   dsetSuggestions([]);
+//   dsetShowSuggestions(false);
+// };
+//   const [slide,setSlide]=useState(false);
+//   const handleslide=()=>{
+//     setSlide(!slide);
+//   }
 
   // conditions
 
@@ -130,7 +134,13 @@ const dhandleSelectSuggestion = (dselectedTerm) => {
 <div className='flex w-[100%] justify-center items-center'>
   
 <div className=' lg:flex lg:w-[100%] justify-center'>
-  <SearchBooking trip1={trip1} handletrip1={handletrip1}/>
+  <SearchBooking trip1={trip1} handletrip1={handletrip1}
+  startDate={startDate} setstartdate={setstartdate} endDate={endDate} setenddate={setenddate}
+   searchTerm={searchTerm} suggestions={suggestions} 
+   showSuggestions={showSuggestions} dshowSuggestions={dshowSuggestions} dsearchTerm={dsearchTerm} dsuggestions={dsuggestions
+   } dhandleSelectSuggestion={dhandleSelectSuggestion} handleSelectSuggestion={handleSelectSuggestion}
+   allTerms={allTerms} setAllTerms={setAllTerms} dallTerms={dallTerms} dsetAllTerms={dsetAllTerms}
+   dhandleInputChange={dhandleInputChange} handleInputChange={handleInputChange}/>
     </div>
 </div>
     
