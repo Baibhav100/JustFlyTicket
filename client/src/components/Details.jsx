@@ -93,7 +93,7 @@ const Details = ({trip1, searchTerm ,suggestions ,startDate, setstartdate, endDa
       <p className='text-gray-800 text-[10px]'>{dsearchTerm? dsearchTerm.slice(4,60):''}</p>
       </div>
     </div>
-        <div className=' w-[300px] lg:w-[400px] h-[400px] bg-[#00478a] mb-[10px] flex justify-center '>
+        <div className=' w-[300px] lg:w-[400px] h-[400px] bg-[#00478a] mb-[10px] flex justify-center shadow-lg'>
           <div className='mt-9 w-[100%]'>
           <h2 className='text-md font-semibold text-white'>Fares at discounted prices!</h2>
          <div className='w-[100%] flex justify-center'>
@@ -101,15 +101,12 @@ const Details = ({trip1, searchTerm ,suggestions ,startDate, setstartdate, endDa
          </div>
           <div className='flex w-[100%] h-[100px] mt-[40%] justify-between items-center bg-white'>
             <p className='text-md text-red-500 line-through'>$499</p>
-            <p className='text-5xl text-yellow font-bold'>$200 <sup>*</sup></p>
-           
-                      
+            <p className='text-5xl text-yellow font-bold'>$200 <sup>*</sup></p>          
             </div>
-          </div>
-
+          </div>  
         </div>
       </div>
-   <div className='w-[100%] bg-gray-100 p-7'>
+   <div className='w-[100%] bg-gray-100 p-7 shadow-lg'>
     <div className='justify-between flex text-white w-[100%] bg-[#1f2937] rounded-md p-4'>
       <p className='md:text-xl lg:text-2xl'>Call Now</p>
       <p>1-(000)-(000)-(0000)</p>

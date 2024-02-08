@@ -251,7 +251,7 @@ const Main = ({trip1,handletrip1, searchTerm ,suggestions ,
             <img className='rounded-md transform transition duration-500 
                                 hover:scale-110'src={require('../images/australia.jpg')} alt="" />
           </div>
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between"> 
             {/* <span className="text-blue-500 font-semibold">$350</span> */}
             <button  onClick={()=>scrollToSection('book')} className="bg-blue-500 text-white py-1 px-3 rounded-md hover:bg-blue-600 transition mt-2">Book Now</button>
           </div>
