@@ -4,6 +4,7 @@ import Pop from './Pop';
 import Pop2 from './Pop2';
 import SearchBooking from './SearchBooking';
 import Aeroplane from './Aeroplane';
+import Popup from './Popup';
 // import Ripple from './Ripple';
 
 const Main = ({trip1,handletrip1, searchTerm ,suggestions ,
@@ -117,6 +118,9 @@ const Main = ({trip1,handletrip1, searchTerm ,suggestions ,
   return (
 
 <div>
+  <div>
+    <Popup/>
+  </div>
   <div className='hidden lg:block'>
   <Aeroplane/>
   </div>

@@ -2,11 +2,15 @@ import React, { useEffect, useState } from 'react'
 import Pop2 from './Pop2';
 import { HiOutlineArrowLongRight, HiOutlineArrowsRightLeft } from 'react-icons/hi2';
 import Footer from './Footer';
+import Popup from './Popup';
 
 const Details = ({trip1, searchTerm ,suggestions ,startDate, setstartdate, endDate, setenddate,
   showSuggestions ,dshowSuggestions ,dsearchTerm, dsuggestions,
    dhandleSelectSuggestion ,handleSelectSuggestion,
   allTerms, setAllTerms ,dallTerms, dsetAllTerms,dhandleInputChange, handleInputChange}) => {
+
+
+
     const [isEmailSent,setIsEmailSent]=useState(false);
     //
     const generateCode = () => {
@@ -76,11 +80,15 @@ const Details = ({trip1, searchTerm ,suggestions ,startDate, setstartdate, endDa
   return (
 
 <>
+<Popup/>
 <div className="bg-white p-6 rounded-md shadow-md flex justify-center items-center w-[100%] ">
 <div className='flex w-[100%] justify-center items-center mt-[34px]'>
   
 <div className=' lg:flex lg:w-[80%] justify-center lg:justify-between gap-20'>
 <div className=' text-center items-center mt-4'>
+        <div className='rounded-xl mt-[-40px]  bg-green-800/70 text-white p-[10px]'>
+          Call for 24/7 Assistance - 1-(000)-(000)-(0000)
+        </div>
         {/* <img className='W-[420px] h-[430px] transform transition duration-500 hover:scale-110'src={require('../images/traveling.png')} alt="" /> */}
         <div className='flex w-[300px] lg:w-[400px] justify-between items-center p-6'>
         <div>
