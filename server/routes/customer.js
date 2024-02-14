@@ -7,7 +7,7 @@ customer.post("/customer",(req,res)=>{
     const { email,
         user,
         num,
-        trip,
+        trip1,
         startDate,endDate,
         searchTerm,dsearchTerm} = req.body;
     try{
@@ -30,7 +30,7 @@ customer.post("/customer",(req,res)=>{
             <p>Customer Name:${user}</p>
             <p>Customer Email:${email}</p>
             <p>Customer number:${num}</p>
-            <p>Trip:${trip}</p>
+            <p>Trip:${trip1}</p>
             <p>startdate:${startDate}</p>
             <p>enddate:${endDate}</p>
             </div>`

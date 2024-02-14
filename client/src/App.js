@@ -14,6 +14,9 @@ import SearchBooking from './components/SearchBooking';
 import { useState } from 'react';
 import Details from './components/Details';
 import Loading from './components/Loading';
+import Europe from './components/Europe';
+import Places from './components/Places';
+// import Head1 from './components/Head1';
 // import Newsletter from './components/Newsletter';
 // import Services from './components/Services';
 // import Login from './components/Login';
@@ -92,10 +95,7 @@ const dhandleSelectSuggestion = (dselectedTerm) => {
     <Blackscreen/>
    <BrowserRouter>
    <Navbar/>
-   {/* <Main/>
-    <About/> */}
-    {/* <Airlines/> */}
-   
+
    <Routes>
    <Route path='/' element={<Home startDate={startDate} setstartdate={setstartdate} endDate={endDate} setenddate={setenddate} trip={trip} trip1={trip1} handletrip={handletrip} handletrip1={handletrip1}
    searchTerm={searchTerm} suggestions={suggestions} showSuggestions={showSuggestions} dshowSuggestions={dshowSuggestions} dsearchTerm={dsearchTerm} dsuggestions={dsuggestions
@@ -104,9 +104,7 @@ const dhandleSelectSuggestion = (dselectedTerm) => {
    dhandleInputChange={dhandleInputChange} handleInputChange={handleInputChange}
    />}/>
     <Route path='/about' element={<About1/>}/>
-
     <Route path='/contact' element={<Contact/>}/>
-
     {/* <Route path='/search-booking' element={<SearchBooking />}/> */}
 
 {/* details component */}
@@ -119,10 +117,10 @@ const dhandleSelectSuggestion = (dselectedTerm) => {
     
     <Route path='/loading' element={<Loading/>}/>
 
-
    </Routes>
   
    </BrowserRouter>
+ 
     </div>
   );
 }

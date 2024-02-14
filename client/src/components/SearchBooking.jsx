@@ -33,6 +33,7 @@ const SearchBooking = ({trip1,handletrip1, searchTerm ,suggestions ,
         }); 
     });
   return (
+ <>
  <div className='w-[100%] h-[500px] relative'>
     <div>
     <img className='bg-cover w-[100%] h-[500px] brightness-50'src="https://wallpapercave.com/wp/wp5240523.jpg" alt="plane"/>
@@ -116,28 +117,23 @@ const SearchBooking = ({trip1,handletrip1, searchTerm ,suggestions ,
         <div className=' flex w-[100%] justify-end p-9'>
           <button  onClick={handleSubmit} className='w-[150px] h-[35px] bg-[#1f2937] text-white cursor-pointer'>Search</button>
         </div>
+        
    </form>
-
-  </div>
           </div>
-      
+     
 
          </div>
-          <div>
-
-          </div>
          </div>
         </div>
 
-
+     
       </div>
- 
-      {/* <Footer/> */}
+    
       </div>
-      {/* <div className='absolute top-0 left-[50%] z-10'>
-        {loading && <Loading />}
-        </div> */}
+      </div>
+      
  </div>
+ </>
       
   )
 }

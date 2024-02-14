@@ -5,6 +5,9 @@ import Pop2 from './Pop2';
 import SearchBooking from './SearchBooking';
 import Aeroplane from './Aeroplane';
 import Popup from './Popup';
+import Places from './Places';
+import { Outlet } from 'react-router';
+import { FaShieldAlt } from "react-icons/fa";
 // import Ripple from './Ripple';
 
 const Main = ({trip1,handletrip1, searchTerm ,suggestions ,
@@ -122,7 +125,7 @@ const Main = ({trip1,handletrip1, searchTerm ,suggestions ,
     <Popup/>
   </div>
   <div className='hidden lg:block'>
-  <Aeroplane/>
+  {/* <Aeroplane/> */}
   </div>
 <div className='flex w-[100%] justify-center items-center '>
 <div className='w-[100%] flex justify-center items-center'>
@@ -130,10 +133,10 @@ const Main = ({trip1,handletrip1, searchTerm ,suggestions ,
 </div>
 </div>
 <div className='bg-[#1f2937] p-2 text-white flex justify-initial items-center w-[100%]' id='book'>
-     <div className="text-2xl font-semibold mb-4 ml-[2%] mt-4">Book Your Flights</div>
+     <div className="text-2xl font-semibold mb-4 ml-[2%] mt-4">Book Your Flights Tickets</div>
      
  </div>
-<div className="bg-slate-400">
+<div>
 <div className="bg-white rounded-md shadow-md w-[100%]">
 <div className='flex w-[100%] justify-center items-center'>
   
@@ -146,138 +149,178 @@ const Main = ({trip1,handletrip1, searchTerm ,suggestions ,
    allTerms={allTerms} setAllTerms={setAllTerms} dallTerms={dallTerms} dsetAllTerms={dsetAllTerms}
    dhandleInputChange={dhandleInputChange} handleInputChange={handleInputChange}/>
     </div>
+
 </div>
     
     </div>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-[100%] p-[40px]  bg-[#1f2937]'>
+   <div className='flex justify-center item-center w-[100%] h-[100%]'>
+   <div className='bg-gray-700/90 w-[100%] flex justify-center items-center h-[120px] shadow-2xl'>
+      <div className='flex justify-between items-center text-white gap-2 '>
+        <div className='w-[60px] h-[60px] flex justify-center items-center rounded-[50%] bg-slate-950'>
+        <div className='text-white text-3xl'>
+        <FaShieldAlt/>
+          </div>
+        </div>
+          <div className='flex justify-center items-center w-[100%] h-full'>
+           <div> 
+            <p className='text-md font-bold'>Lowest Fares Guaranteed</p>
+            <p className='text-sm'> Be sure not to overspend on airfares to any of the countless destinations worldwide. </p></div>
+          </div>
+      </div>
+    </div>
+   </div>
+   <div className='flex justify-center item-center w-[100%] h-[100%]'>
+   <div className='bg-gray-700/90 w-[100%] flex justify-center items-center h-[120px] shadow-2xl'>
+      <div className='flex justify-between items-center text-white gap-2 '>
+        <div className='w-[60px] h-[60px] flex justify-center items-center rounded-[50%] bg-slate-950'>
+        <div className='text-white text-3xl'>
+        <FaShieldAlt/>
+          </div>
+        </div>
+          <div className='flex justify-center items-center w-[100%] h-full'>
+           <div> 
+            <p className='text-md font-bold'>Live Support</p>
+            <p className='text-sm'> Available 24/7 for any kind of queries before, during or after the trip.</p></div>
+          </div>
+      </div>
+    </div>
+   </div>
+   <div className='flex justify-center item-center w-[100%] h-[100%]'>
+   <div className='bg-gray-700/90 w-[100%] flex justify-center items-center h-[120px] shadow-2xl'>
+      <div className='flex justify-between items-center text-white gap-2 '>
+        <div className='w-[60px] h-[60px] flex justify-center items-center rounded-[50%] bg-slate-950'>
+        <div className='text-white text-3xl'>
+        <FaShieldAlt/>
+          </div>
+        </div>
+          <div className='flex justify-center items-center w-[100%] h-full'>
+           <div> 
+            <p className='text-md font-bold'>Lowest Fares Guaranteed</p>
+            <p className='text-sm'> Be sure not to overspend on airfares to any of the countless destinations worldwide. </p></div>
+          </div>
+      </div>
+    </div>
+   </div>
+ 
+</div>
 
     {/* popular flight destinations */}
-    <div className="mt-2 p-[40px]">
-      <h2 className="text-2xl font-semibold mb-4 text-gray-600 text-center">Popular Flight Destinations</h2>
+    {/* <div className="mt-2 p-[40px]">
+       <h2 className="text-2xl font-semibold mb-4 text-gray-600 text-center">Popular Flight Destinations</h2>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
         <div className="bg-white p-6 rounded-md shadow-md">
           <h3 className="text-lg font-semibold mb-2">Flight to New York</h3>
-          {/* <p className="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> */}
+         
           <div><img className='rounded-md transform transition duration-500 
                                 hover:scale-110'src={require('../images/newyork.jpg')} alt="" /></div>
           <div className="flex items-center justify-between">
-            {/* <span className="text-blue-500 font-semibold">$350</span> */}
+           
             <button onClick={()=>scrollToSection('book')} className="bg-blue-500 text-white py-1 mt-2 px-3 rounded-md hover:bg-blue-600 transition">
               Book Now</button>
           </div>
         </div>
         <div className="bg-white p-6 rounded-md shadow-md">
           <h3 className="text-lg font-semibold mb-2">Flight to Miami</h3>
-          {/* <p className="text-gray-600 mb-4"></p> */}
+        
           <div>
             <img className='rounded-md transform transition duration-500 
                                 hover:scale-110' src={require('../images/miami.jpg')}alt="" />
           </div>
           <div className="flex items-center justify-between">
-            {/* <span className="text-blue-500 font-semibold">$350</span> */}
+           
             <button onClick={()=>scrollToSection('book')} className="bg-blue-500 text-white py-1 px-3 mt-2 rounded-md hover:bg-blue-600 transition">Book Now</button>
           </div>
         </div>
         <div className="bg-white p-6 rounded-md shadow-md">
           <h3 className="text-lg font-semibold mb-2">Flight to Amsterdam</h3>
-          {/* <p className="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> */}
+          
           <div>
             <img className='rounded-md transform transition duration-500 
                                 hover:scale-110' src={require('../images/amsterdam.jpg')} alt="" />
           </div>
           <div className="flex items-center justify-between">
-            {/* <span className="text-blue-500 font-semibold">$350</span> */}
-            <button   onClick={()=>scrollToSection('book')} className="bg-blue-500 text-white py-1 px-3 mt-2 rounded-md hover:bg-blue-600 transition">Book Now</button>
+           <button   onClick={()=>scrollToSection('book')} className="bg-blue-500 text-white py-1 px-3 mt-2 rounded-md hover:bg-blue-600 transition">Book Now</button>
           </div>
         </div>
         <div className="bg-white p-6 rounded-md shadow-md">
           <h3 className="text-lg font-semibold mb-2">Flight to Australia</h3>
-          {/* <p className="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> */}
           <div>
             <img className='rounded-md transform transition duration-500 hover:scale-110'src={require('../images/australia.jpg')} alt="" />
           </div>
           <div className="flex items-center justify-between">
-            {/* <span className="text-blue-500 font-semibold">$350</span> */}
             <button  onClick={()=>scrollToSection('book')} className="bg-blue-500 text-white py-1 px-3 rounded-md hover:bg-blue-600 transition mt-2">Book Now</button>
           </div>
         </div>
         <div className="bg-white p-6 rounded-md shadow-md">
           <h3 className="text-lg font-semibold mb-2">Flight to Italy</h3>
-          {/* <p className="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> */}
           <div>
             <img className='rounded-md transform transition duration-500 hover:scale-110' src={require('../images/italy.jpg')} alt="" />
           </div>
           <div className="flex items-center justify-between">
-            {/* <span className="text-blue-500 font-semibold">$350</span> */}
-            <button  onClick={()=>scrollToSection('book')} className="bg-blue-500 text-white py-1 px-3 mt-2 rounded-md hover:bg-blue-600 transition">Book Now</button>
+          <button  onClick={()=>scrollToSection('book')} className="bg-blue-500 text-white py-1 px-3 mt-2 rounded-md hover:bg-blue-600 transition">Book Now</button>
           </div>
         </div>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mt-8">
         <div className="bg-white p-6 rounded-md shadow-md">
           <h3 className="text-lg font-semibold mb-2">Flight to New York</h3>
-          {/* <p className="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> */}
           <div><img className='rounded-md transform transition duration-500 
                                 hover:scale-110'src={require('../images/newyork.jpg')} alt="" /></div>
           <div className="flex items-center justify-between">
-            {/* <span className="text-blue-500 font-semibold">$350</span> */}
             <button onClick={()=>scrollToSection('book')} className="bg-blue-500 text-white py-1 mt-2 px-3 rounded-md hover:bg-blue-600 transition">
               Book Now</button>
           </div>
         </div>
         <div className="bg-white p-6 rounded-md shadow-md">
           <h3 className="text-lg font-semibold mb-2">Flight to Miami</h3>
-          {/* <p className="text-gray-600 mb-4"></p> */}
           <div>
             <img className='rounded-md transform transition duration-500 hover:scale-110' src={require('../images/miami.jpg')}alt="" />
           </div>
           <div className="flex items-center justify-between">
-            {/* <span className="text-blue-500 font-semibold">$350</span> */}
             <button onClick={()=>scrollToSection('book')} className="bg-blue-500 text-white py-1 px-3 mt-2 rounded-md hover:bg-blue-600 transition">Book Now</button>
           </div>
         </div>
         <div className="bg-white p-6 rounded-md shadow-md">
           <h3 className="text-lg font-semibold mb-2">Flight to Amsterdam</h3>
-          {/* <p className="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> */}
           <div>
             <img className='rounded-md transform transition duration-500 
                                 hover:scale-110' src={require('../images/amsterdam.jpg')} alt="" />
           </div>
           <div className="flex items-center justify-between">
-            {/* <span className="text-blue-500 font-semibold">$350</span> */}
             <button   onClick={()=>scrollToSection('book')} className="bg-blue-500 text-white py-1 px-3 mt-2 rounded-md hover:bg-blue-600 transition">Book Now</button>
           </div>
         </div>
         <div className="bg-white p-6 rounded-md shadow-md">
           <h3 className="text-lg font-semibold mb-2">Flight to Australia</h3>
-          {/* <p className="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> */}
           <div>
             <img className='rounded-md transform transition duration-500 
                                 hover:scale-110'src={require('../images/australia.jpg')} alt="" />
           </div>
           <div className="flex items-center justify-between"> 
-            {/* <span className="text-blue-500 font-semibold">$350</span> */}
             <button  onClick={()=>scrollToSection('book')} className="bg-blue-500 text-white py-1 px-3 rounded-md hover:bg-blue-600 transition mt-2">Book Now</button>
           </div>
         </div>
         <div className="bg-white p-6 rounded-md shadow-md">
           <h3 className="text-lg font-semibold mb-2">Flight to Italy</h3>
-          {/* <p className="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> */}
           <div>
             <img className='rounded-md transform transition duration-500 hover:scale-110' src={require('../images/italy.jpg')} alt="" />
           </div>
           <div className="flex items-center justify-between">
-            {/* <span className="text-blue-500 font-semibold">$350</span> */}
             <button  onClick={()=>scrollToSection('book')} className="bg-blue-500 text-white py-1 px-3 mt-2 rounded-md hover:bg-blue-600 transition">Book Now</button>
           </div>
         </div>
       </div>
       
-    </div>
-
+    </div> */}
+    <h2 className="text-2xl font-semibold p-4 text-gray-600 text-center">Most Popular Flight Destinations</h2>
+    <Places/>
+  
+{/* /end */}
   </div>
-  <div>
-    <button className='fixed z-10 right-[2%] top-[80%] ml-9 text-small uppercase animate-bounce bg-[#C70039] rounded-[50%] p-4  text-white hover:border-b'><a href="tel:+919365163250">< AiOutlinePhone size={30}/></a></button>s 
+  <div> 
+    <button className='fixed z-10 right-[2%] top-[80%] ml-9 text-small uppercase animate-bounce bg-[#C70039] rounded-[50%] p-4  text-white hover:border-b'><a href="tel:+919365163250">< AiOutlinePhone size={30}/></a></button>
   </div>
 </div>
   
