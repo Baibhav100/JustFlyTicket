@@ -29,7 +29,7 @@ const Details = ({trip1, searchTerm ,suggestions ,startDate, setstartdate, endDa
     //sending email
     // const [startDate,setstartdate]=useState('');
     // const [endDate,setenddate]=useState('');
-    const sendemail=async(e)=>{
+    const sendemail1=async(e)=>{
       e.preventDefault();
       const res= await fetch('/customer',{
          method :"POST",
@@ -87,7 +87,7 @@ const Details = ({trip1, searchTerm ,suggestions ,startDate, setstartdate, endDa
 <div className=' lg:flex lg:w-[80%] justify-center lg:justify-between gap-20'>
 <div className=' text-center items-center mt-4'>
         <div className='rounded-xl mt-[-40px]  bg-green-800/70 text-white p-[10px]'>
-          Call for 24/7 Assistance - 1-(000)-(000)-(0000)
+          Call for 24/7 Assistance - +1 (888) 350-6579
         </div>
         {/* <img className='W-[420px] h-[430px] transform transition duration-500 hover:scale-110'src={require('../images/traveling.png')} alt="" /> */}
         <div className='flex w-[300px] lg:w-[400px] justify-between items-center p-6'>
@@ -117,7 +117,7 @@ const Details = ({trip1, searchTerm ,suggestions ,startDate, setstartdate, endDa
    <div className='w-[100%] bg-gray-100 p-7 shadow-lg'>
     <div className='justify-between flex text-white w-[100%] bg-[#1f2937] rounded-md p-4'>
       <p className='md:text-xl lg:text-2xl'>Call Now</p>
-      <p>1-(000)-(000)-(0000)</p>
+      <p>+1 (888) 350-6579</p>
     </div>
       <form className='mt-7'>
       
@@ -195,7 +195,7 @@ const Details = ({trip1, searchTerm ,suggestions ,startDate, setstartdate, endDa
         </div> 
 
      
-        <button type="submit" onClick={sendemail} className="bg-[#1f2937] w-[100%] text-white py-2 px-4 rounded-md hover:bg-[#1f2937]/90 transition">Book</button>
+        <button type="submit" onClick={sendemail1} className="bg-[#1f2937] w-[100%] text-white py-2 px-4 rounded-md hover:bg-[#1f2937]/90 transition">Book</button>
         <Pop2 alphanumericCode={alphanumericCode} isOpen={isEmailSent} onClose={closeModal}/>
       </form>
    </div>

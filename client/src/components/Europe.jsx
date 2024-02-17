@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import europe from '../contents/Europe'
 import { CiLocationOn } from "react-icons/ci";
+import { Link } from 'react-router-dom';
+import SearchBooking from './SearchBooking';
 
-const Europe = () => {
+const Europe = ({scrolltocomponent}) => {
+  // const handleClick=()=>{
+  //   scrollToRef.current.scrollIntoView({ behavior: 'smooth' });
+  // }
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-[100%]'>
       {
         europe.map((item)=>(
           <div className='w-[100%]' key={item.id}>
-           <div className='bg-white shadow-2xl'>
+           <div className='bg-white shadow-2xl cursor-pointer hover:scale-105 duration-200' onClick={scrolltocomponent}>
         <div>
          <div>
            <img className='w-[100%] h-[190px]' src={item.image} alt="" />
@@ -33,6 +38,6 @@ const Europe = () => {
     }
     </div>
   )
-}
+};
 
 export default Europe

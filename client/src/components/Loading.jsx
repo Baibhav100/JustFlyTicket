@@ -22,12 +22,12 @@ useEffect(()=>{
   return (
   <>
   <div className=' flex h-[300px] w-[100%] justify-center items-center'>
-    <h2 className='text-2xl md:text-3xl lg:text-4xl'>Fetching all the data....</h2>
-    <img  className=" " src={require("../images/flight.png")} alt="" />
+    <h2 className='text-sm md:text-3xl lg:text-4xl'>Fetching all the data....</h2>
+    <img  className="w-[100px] lg:w-[400px]" src={require("../images/flight.png")} alt="" />
    
   </div>
   <div>
-    <img className='w-[100%] h-[500px]' src={require("../images/travel.png")} alt="" />
+    <img className='w-[100%] h-[200px] lg:h-[500px]' src={require("../images/travel.png")} alt="" />
   </div>
   <Footer/>
   </>

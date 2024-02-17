@@ -19,7 +19,7 @@ const Pop2 = ({isOpen,onClose,alphanumericCode}) => {
 
   return (
     <Modal isOpen={isOpen} onRequestClose={onClose}>
-        <div className='flex justify-between items-center md:w-[100%] h-screen'>
+        <div className='flex justify-between items-center md:w-[100%] h-screen bg-[#1f2937] text-white'>
             <div className='flex justify-center items-center md:w-[100%] '>
                <div className='w-[50%] md:w-[90%] gap-3 justify-between items-center md:flex '>
               <div>
@@ -33,7 +33,7 @@ const Pop2 = ({isOpen,onClose,alphanumericCode}) => {
       <button className='bg-red-700 p-2 text-white text-center' onClick={onClose}>Thank You!</button>
       </div>
               </div>
-               <div className=' w-full md:w-[60%] h-[300px] bg-slate-200 flex justify-center items-center my-3'>
+               <div className=' w-full md:w-[60%] h-[100px] md:h-[300px] bg-slate-200 flex justify-center items-center my-3'>
                 <p className=' text-md md:text-3xl text-gray-500'>ADVERTISEMENT</p>
                </div>
                </div>

@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { AiOutlinePhone } from 'react-icons/ai';
+import { BiSupport } from "react-icons/bi";
 import Pop from './Pop';
 import Pop2 from './Pop2';
 import SearchBooking from './SearchBooking';
@@ -7,14 +8,22 @@ import Aeroplane from './Aeroplane';
 import Popup from './Popup';
 import Places from './Places';
 import { Outlet } from 'react-router';
+import { GiMoneyStack } from "react-icons/gi";
 import { FaShieldAlt } from "react-icons/fa";
+import Chatbox from './Chatbox';
 // import Ripple from './Ripple';
-
 const Main = ({trip1,handletrip1, searchTerm ,suggestions ,
   startDate, setstartdate, endDate, setenddate,
   showSuggestions ,dshowSuggestions ,dsearchTerm, dsuggestions,
    dhandleSelectSuggestion ,handleSelectSuggestion,
   allTerms, setAllTerms ,dallTerms, dsetAllTerms,dhandleInputChange, handleInputChange}) => {
+
+    const componentRef = useRef(null);
+    const scrolltocomponent=()=>{
+      if (componentRef.current) {
+        componentRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
   // console.log('trip1 in main:', trip1);
   const [isEmailSent,setIsEmailSent]=useState(false);
   //
@@ -32,97 +41,23 @@ const Main = ({trip1,handletrip1, searchTerm ,suggestions ,
   };
   const alphanumericCode = generateCode();
   //
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
+  // const scrollToSection = (sectionId) => {
+  //   const element = document.getElementById(sectionId);
 
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
-    }
-  };
-//   //sending email
-// const [startDate,setstartdate]=useState('');
-// const [endDate,setenddate]=useState('');
-// const [passenger,setpassenger]=useState('');
-// const [email,setemail]=useState('');
-// const [user,setuser]=useState('');
-// const [num,setnum]=useState('')
-//   const [allTerms, setAllTerms] = useState([]);
-//   const [dallTerms, dsetAllTerms] = useState([]);
-//   //
-//   useEffect(() => {
-//     // Fetch and parse data from the text file
-//     fetch('Airports.txt')
-//       .then(response => response.text())
-//       .then(data => {
-//         const parsedData = data.split('\n').filter(term => term.trim() !== '');
-//         setAllTerms(parsedData);
-//         dsetAllTerms(parsedData);
-
-//       }); 
-//   }, []);
-
-//   const handleInputChange = (event) => {
-//     const value = event.target.value;
-//     setSearchTerm(value);
-
-//     // Filter suggestions based on the input
-//     const filteredSuggestions = allTerms.filter(term =>
-//       term.toLowerCase().includes(value.toLowerCase())
-//     );
-
-//     setSuggestions(filteredSuggestions);
-//     // Show suggestions div
-//     setShowSuggestions(true);
-//   };
-//   //
-//   const [dsuggestions, dsetSuggestions] = useState([]);
-//   const [dsearchTerm, dsetSearchTerm] = useState('');
-//   const dhandleInputChange = (event) => {
-//     const value = event.target.value;
-//     dsetSearchTerm(value);  
-
-//     // Filter suggestions based on the input
-//     const filteredSuggestions = dallTerms.filter(term =>
-//       term.toLowerCase().includes(value.toLowerCase())
-//     );
-
-//     dsetSuggestions(filteredSuggestions);
-//     dsetShowSuggestions(true);
-//   };
-//   //
-//   //searching 
-//   const [showSuggestions, setShowSuggestions] = useState(true);
-//   const [dshowSuggestions, dsetShowSuggestions] = useState(true);
-//  const [searchTerm, setSearchTerm] = useState('');
-//  const [suggestions, setSuggestions] = useState([]);
-
-// const handleSelectSuggestion = (selectedTerm) => {
-//   setSearchTerm(selectedTerm);
-
-//   setSuggestions([]);
-//   setShowSuggestions(false);
-
-// };
-// const dhandleSelectSuggestion = (dselectedTerm) => {
-//   dsetSearchTerm(dselectedTerm);
-//   dsetSuggestions([]);
-//   dsetShowSuggestions(false);
-// };
-//   const [slide,setSlide]=useState(false);
-//   const handleslide=()=>{
-//     setSlide(!slide);
-//   }
-
+  //   if (element) {
+  //     element.scrollIntoView({
+  //       behavior: 'smooth',
+  //       block: 'start',
+  //     });
+  //   }
+  // };
   // conditions
 
   return (
 
 <div>
   <div>
-    <Popup/>
+    <Popup/>  
   </div>
   <div className='hidden lg:block'>
   {/* <Aeroplane/> */}
@@ -132,7 +67,7 @@ const Main = ({trip1,handletrip1, searchTerm ,suggestions ,
 <img className='w-[70%] text-center bg-contain sm:h-200px md:h-[400px] lg:h-[700px]'src={require('../images/banner.jpeg')} alt=""/>
 </div>
 </div>
-<div className='bg-[#1f2937] p-2 text-white flex justify-initial items-center w-[100%]' id='book'>
+<div className='bg-[#1f2937] p-2 text-white flex justify-initial items-center w-[100%]'>
      <div className="text-2xl font-semibold mb-4 ml-[2%] mt-4">Book Your Flights Tickets</div>
      
  </div>
@@ -147,7 +82,7 @@ const Main = ({trip1,handletrip1, searchTerm ,suggestions ,
    showSuggestions={showSuggestions} dshowSuggestions={dshowSuggestions} dsearchTerm={dsearchTerm} dsuggestions={dsuggestions
    } dhandleSelectSuggestion={dhandleSelectSuggestion} handleSelectSuggestion={handleSelectSuggestion}
    allTerms={allTerms} setAllTerms={setAllTerms} dallTerms={dallTerms} dsetAllTerms={dsetAllTerms}
-   dhandleInputChange={dhandleInputChange} handleInputChange={handleInputChange}/>
+   dhandleInputChange={dhandleInputChange} handleInputChange={handleInputChange} ref={componentRef}/>
     </div>
 
 </div>
@@ -157,9 +92,9 @@ const Main = ({trip1,handletrip1, searchTerm ,suggestions ,
    <div className='flex justify-center item-center w-[100%] h-[100%]'>
    <div className='bg-gray-700/90 w-[100%] flex justify-center items-center h-[120px] shadow-2xl'>
       <div className='flex justify-between items-center text-white gap-2 '>
-        <div className='w-[60px] h-[60px] flex justify-center items-center rounded-[50%] bg-slate-950'>
+        <div className='w-[60px] h-[60px] flex justify-center items-center rounded-[50%] ml-2 bg-slate-950'>
         <div className='text-white text-3xl'>
-        <FaShieldAlt/>
+        <GiMoneyStack/>
           </div>
         </div>
           <div className='flex justify-center items-center w-[100%] h-full'>
@@ -173,9 +108,9 @@ const Main = ({trip1,handletrip1, searchTerm ,suggestions ,
    <div className='flex justify-center item-center w-[100%] h-[100%]'>
    <div className='bg-gray-700/90 w-[100%] flex justify-center items-center h-[120px] shadow-2xl'>
       <div className='flex justify-between items-center text-white gap-2 '>
-        <div className='w-[60px] h-[60px] flex justify-center items-center rounded-[50%] bg-slate-950'>
+        <div className='w-[60px] h-[60px] flex justify-center items-center rounded-[50%] ml-2 bg-slate-950'>
         <div className='text-white text-3xl'>
-        <FaShieldAlt/>
+        < BiSupport />
           </div>
         </div>
           <div className='flex justify-center items-center w-[100%] h-full'>
@@ -189,15 +124,15 @@ const Main = ({trip1,handletrip1, searchTerm ,suggestions ,
    <div className='flex justify-center item-center w-[100%] h-[100%]'>
    <div className='bg-gray-700/90 w-[100%] flex justify-center items-center h-[120px] shadow-2xl'>
       <div className='flex justify-between items-center text-white gap-2 '>
-        <div className='w-[60px] h-[60px] flex justify-center items-center rounded-[50%] bg-slate-950'>
+        <div className='w-[60px] h-[60px] flex justify-center items-center rounded-[50%] bg-slate-950 ml-2'>
         <div className='text-white text-3xl'>
         <FaShieldAlt/>
           </div>
         </div>
           <div className='flex justify-center items-center w-[100%] h-full'>
            <div> 
-            <p className='text-md font-bold'>Lowest Fares Guaranteed</p>
-            <p className='text-sm'> Be sure not to overspend on airfares to any of the countless destinations worldwide. </p></div>
+            <p className='text-md font-bold'>Reliable and Secure</p>
+            <p className='text-sm'>Ensures protection of sensitive datas of the customers during flight reservation.</p></div>
           </div>
       </div>
     </div>
@@ -314,14 +249,15 @@ const Main = ({trip1,handletrip1, searchTerm ,suggestions ,
       </div>
       
     </div> */}
-    <h2 className="text-2xl font-semibold p-4 text-gray-600 text-center">Most Popular Flight Destinations</h2>
-    <Places/>
+    <h2 className="text-2xl font-semibold p-4 text-gray-600 text-center mt-10">Most Popular International Flight Destinations</h2>
+    <Places scrolltocomponent={scrolltocomponent}/>
   
 {/* /end */}
   </div>
   <div> 
-    <button className='fixed z-10 right-[2%] top-[80%] ml-9 text-small uppercase animate-bounce bg-[#C70039] rounded-[50%] p-4  text-white hover:border-b'><a href="tel:+919365163250">< AiOutlinePhone size={30}/></a></button>
+    <button className='fixed z-10 right-[2%] top-[80%] ml-9 text-small uppercase animate-bounce bg-[#C70039] rounded-[50%] p-4  text-white hover:border-b'><a href="tel:+18883506579">< AiOutlinePhone size={30}/></a></button>
   </div>
+  {/* <Chatbox/> */}
 </div>
   
   

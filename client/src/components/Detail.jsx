@@ -59,7 +59,7 @@ const   Detail = ({startDate,endDate,searchTerm,selectedTrip,dsearchTerm,day,set
   return (
     <div className='py-5 h-[70vh] w-[100%] flex '>
      <div className='w-[50%]'>
-     <form action="">
+     <form>
       <div className='text-white py-3'>
        Passenger Name
       </div>

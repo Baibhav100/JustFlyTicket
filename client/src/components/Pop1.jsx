@@ -5,7 +5,7 @@ const Pop1 = ({isOpen,onClose}) => {
   return (
     <div>
     <Modal isOpen={isOpen} onRequestClose={onClose}>
-        <div className='flex justify-center items-center w-[100%] h-screen'>
+        <div className='flex justify-center items-center w-[100%] h-screen bg-[#1f2937]'>
             <div className='w-[100%]'>
                 <img className='text-center' src={require('../images/agent.png')} alt="" />
             

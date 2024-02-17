@@ -52,8 +52,7 @@ const Footer = () => {
           <li><a href="#" className="text-gray-300 hover:text-white">< FaCcDiscover size={40}/></a></li> 
         </ul>
       </div>
-
-
+      <p>Contact us at ticketing@justflyticket.com</p>
     </div>
     <hr className="my-6 border-gray-700"/>
 

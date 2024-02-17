@@ -19,7 +19,7 @@ const Pop = ({isOpen,onClose,alphanumericCode}) => {
 
   return (
     <Modal isOpen={isOpen} onRequestClose={onClose}>
-        <div className='flex justify-center items-center w-[100%] h-screen'>
+        <div className='flex justify-center items-center w-[100%] h-screen bg-[#1f2937] text-white'>
             <div className='w-[100%]'>
                <div className='w-[90%] flex justify-between '>
                <img className='text-center' src={require('../images/agent.png')} alt="" />

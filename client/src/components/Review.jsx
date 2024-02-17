@@ -1,4 +1,5 @@
 import React from 'react';
+import { IoPersonSharp } from "react-icons/io5";
 
 const StarRating = ({ rating }) => {
   const fullStars = Math.floor(rating);
@@ -49,21 +50,21 @@ const Reviews = () => {
       name: 'John Doe',
       rating: 4.5,
       comment: 'Had an amazing experience with this travel agency. The tour guides were knowledgeable, and the accommodations were excellent.',
-      pic:"https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1704758400&semt=ais"
+      pic:"https://media.istockphoto.com/id/1332100919/vector/man-icon-black-icon-person-symbol.jpg?s=612x612&w=0&k=20&c=AVVJkvxQQCuBhawHrUhDRTCeNQ3Jgt0K1tXjJsFy1eg="
     },
     {
       id: 2,
       name: 'Jane Smith',
       rating: 5,
       comment:'Unforgettable journey! The travel agency organized a perfect itinerary, and every moment was a delight.',
-      pic:"https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1704758400&semt=ais"
+      pic:"https://media.istockphoto.com/id/1332100919/vector/man-icon-black-icon-person-symbol.jpg?s=612x612&w=0&k=20&c=AVVJkvxQQCuBhawHrUhDRTCeNQ3Jgt0K1tXjJsFy1eg="
     },
     {
       id: 3,
       name: 'Julie',
       rating: 5,
       comment: 'Unforgettable journey! The travel agency organized a perfect itinerary, and every moment was a delight.',
-      pic:"https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
+      pic:"https://media.istockphoto.com/id/1332100919/vector/man-icon-black-icon-person-symbol.jpg?s=612x612&w=0&k=20&c=AVVJkvxQQCuBhawHrUhDRTCeNQ3Jgt0K1tXjJsFy1eg="
     },
  
     // Add more reviews as needed

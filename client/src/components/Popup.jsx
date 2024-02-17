@@ -33,7 +33,7 @@ const Popup = () => {
             <p>Get Full Assistance</p>
            <p className='text-red-800 font-bold text-xl lg:text-5xl'>Call Us !</p>
             <div className='bg-blue-900 rounded-md p-2 lg:p-4 mt-4 text-white'>
-            <p className='text-sm lg:text-xl'>+1-(000)-(000)-(0000)</p>
+            <p className='text-sm lg:text-xl'>+1 (888) 350-6579</p>
             </div>
            </div>
            <div className='text-3xl absolute top-[50%] left-[49%] font-semibold animate-pulse'>Hurry Up!</div>
