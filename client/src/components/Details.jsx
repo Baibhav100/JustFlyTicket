@@ -3,13 +3,15 @@ import Pop2 from './Pop2';
 import { HiOutlineArrowLongRight, HiOutlineArrowsRightLeft } from 'react-icons/hi2';
 import Footer from './Footer';
 import Popup from './Popup';
+import { Navigate, useNavigate } from 'react-router';
+import { AiOutlinePhone } from 'react-icons/ai';
 
 const Details = ({trip1, searchTerm ,suggestions ,startDate, setstartdate, endDate, setenddate,
   showSuggestions ,dshowSuggestions ,dsearchTerm, dsuggestions,
    dhandleSelectSuggestion ,handleSelectSuggestion,
   allTerms, setAllTerms ,dallTerms, dsetAllTerms,dhandleInputChange, handleInputChange}) => {
 
-
+    const navigate = useNavigate();
 
     const [isEmailSent,setIsEmailSent]=useState(false);
     //
@@ -52,6 +54,8 @@ const Details = ({trip1, searchTerm ,suggestions ,startDate, setstartdate, endDa
   };
   const closeModal = () => {
     setIsEmailSent(false);
+    // Navigate('./Main.jsx')
+    navigate('/');
   };
   //
   
@@ -126,7 +130,7 @@ const Details = ({trip1, searchTerm ,suggestions ,startDate, setstartdate, endDa
             <label htmlFor="departure" className="block text-sm font-medium text-gray-600">Departure</label>
             <input type="text" id="departure" name="departure" placeholder={searchTerm} value={searchTerm} onChange={handleInputChange} className="mt-1 p-2 w-full border rounded-md"/>
         <div className='bg-[#1f2937] w-[300px] mt-2 absolute z-10'>
-        <ul className={showSuggestions && searchTerm?"h-20 text-white overflow-y-auto border p-4":'hidden'}>
+        <ul className={showSuggestions && searchTerm?"h-20 text-white overflow-y-scroll no-scrollbar border-none p-4":'hidden'}>
         { searchTerm && suggestions.map((term, index) => ( 
       <section className={handleInputChange?'flex cursor-pointer text-center':'hidden'} key={index} onClick={() => handleSelectSuggestion(term)}>
        {term}
@@ -138,8 +142,8 @@ const Details = ({trip1, searchTerm ,suggestions ,startDate, setstartdate, endDa
           <div>
             <label htmlFor="destination" className="block text-sm font-medium text-gray-600">Arrival</label>
             <input type="text" id="destination" name="destination" value={dsearchTerm} onChange={dhandleInputChange} className="mt-1 p-2 w-full border rounded-md"/>
-         <div className='bg-[#1f2937] w-[300px] absolute z-10'>
-         <ul className={dshowSuggestions && dsearchTerm?"h-20 text-white overflow-y-auto border p-4":"hidden"}>
+         <div className='bg-[#1f2937] w-[300px] mt-2 absolute z-10'>
+         <ul className={dshowSuggestions && dsearchTerm?"h-20 text-white overflow-y-scroll no-scrollbar border-none p-4":"hidden"}>
         { dsearchTerm && dsuggestions.map((term, index) => ( 
       <section className={dhandleInputChange?'flex cursor-pointer text-center':'hidden'} key={index} onClick={() => dhandleSelectSuggestion(term)}>
        {term}
@@ -202,6 +206,9 @@ const Details = ({trip1, searchTerm ,suggestions ,startDate, setstartdate, endDa
     </div>
   
 </div>
+<div> 
+    <button className='fixed z-10 right-[2%] top-[80%] ml-9 text-small uppercase animate-bounce bg-[#C70039] rounded-[50%] p-4  text-white hover:border-b'><a href="tel:+18883506579">< AiOutlinePhone size={30}/></a></button>
+  </div>
     </div>
     <Footer/>
 </>

@@ -1,10 +1,13 @@
 const express=require("express");
-const manage=new express.Router();
+const contact=new express.Router();
 const nodemailer=require('nodemailer');
 
-manage.post("/manage",(req,res)=>{
+contact.post("/contact",(req,res)=>{
    
-    const {fname,lname,email,confirm,phone} = req.body;
+    const { email,
+        name,
+        mess,
+    } = req.body;
     try{
         const transporter=nodemailer.createTransport({
             service:"gmail",
@@ -17,15 +20,12 @@ manage.post("/manage",(req,res)=>{
         const mailOptions={
             from:email,
             to:process.env.EMAIL ,
-            subject: "Query",
-            html:`<h1 style="text-align:center">Personal Information of ${fname} ${lname}</h1>
+            subject: "Contact Details",
+            html:`<h1 style="text-align:center">Personal Information of ${name}</h1>
             <div>
-            <p>Airline Confirmation Number:${confirm}</p>
-            <p>Customer First Name:${fname}</p>
-            <p>Customer Last Name:${lname}</p>
+            <p>Customer Name:${name}</p>
             <p>Customer Email:${email}</p>
-            <p>Customer Phone number:${phone}</p>
-         
+            <p>Customer message:${mess}</p>
             </div>`
         }
         transporter.sendMail(mailOptions,(error,info)=>{
@@ -42,4 +42,4 @@ manage.post("/manage",(req,res)=>{
     }
 });
 
-module.exports=manage
+module.exports=contact       

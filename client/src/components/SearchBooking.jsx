@@ -4,6 +4,7 @@ import { GiCommercialAirplane } from "react-icons/gi";
 import { Link, useNavigate } from 'react-router-dom';
 import { FaArrowRight } from "react-icons/fa";
 
+
 // import Main from './Main';
 
 const SearchBooking = forwardRef((
@@ -38,18 +39,18 @@ const SearchBooking = forwardRef((
     });
   return (
  <>
- <div className='w-[100%] h-[500px] relative'>
+ <div className='w-[100%] lg:h-[500px] relative'>
     <div ref={ref}>
-    <img className='bg-cover object-fill w-[100%] h-[500px] brightness-95'src="https://wallpapercave.com/wp/wp5240523.jpg" alt="plane"/>
+    <img className='bg-cover object-fill w-[100%] h-[500px]'src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="plane"/>
       <div className='w-[100%] h-screen absolute top-0'>
         <div className='w-[100%] h-screen flex justify-center items-center'>
          <div className='w-[100%] flex h-screen justify-center item-center'>
          <div className='h-screen'>
-         <div className='flex justify-center items-center gap-3 w-[200px] h-[50px] text-white bg-[#1f2937]'>
+         <div className='flex justify-center items-center gap-3 w-[200px] lg:h-[50px] text-white bg-[#1f2937] lg:mt-3'>
             <p>Flights</p>
             <GiCommercialAirplane/>
           </div>
-          <div className='w-[100%] sm:h-[500px] md:h-[250px]'>
+          <div className='w-[100%] sm:h-[470px] lg:h-[250px] bg-black/40'>
           {/* <Contents trip1={trip1} handletrip1={handletrip1} searchTerm={searchTerm} suggestions={suggestions} 
     showSuggestions={showSuggestions} dshowSuggestions={dshowSuggestions} dsearchTerm={dsearchTerm} dsuggestions={dsuggestions
     } dhandleSelectSuggestion={dhandleSelectSuggestion} handleSelectSuggestion={handleSelectSuggestion}
@@ -59,18 +60,43 @@ const SearchBooking = forwardRef((
           <div>
       <form>
       <div className='flex w-[200px] p-3 justify-between item-center '>
-            <select id="selectOptions" name="selectOptions" value={trip1} onChange={handletrip1} className="mt-1 p-2 w-[200px] border rounded-md">
+            {/* <select id="selectOptions" name="selectOptions" value={trip1} onChange={handletrip1} className="mt-1 p-2 w-[200px] border rounded-md">
       <option value="">Select Trip</option>
         <option value="oneway">One Way</option>
         <option value="roundtrip">Round Trip</option>
-      </select>
+      </select> */}
+      <div className="flex items-center text-white gap-2 mt-4">
+  <label className=" w-[100px]">
+    <input
+      type="radio"
+      name="selectOptions"
+      value="oneway"
+      checked={trip1 === "oneway"}
+      onChange={handletrip1}
+      className="mr-1"
+    />
+    One Way
+  </label>
+
+  <label className='w-[100px]'>
+    <input
+      type="radio"
+      name="selectOptions"
+      value="roundtrip"
+      checked={trip1 === "roundtrip"}
+      onChange={handletrip1}
+      className="mr-1"
+    />
+    Round Trip
+  </label>
+</div>
         </div>
         <div className='lg:flex justify-between gap-6 p-3'>
         <div>
             <label htmlFor="departure" className="block text-sm font-medium text-white">Departure</label>
             <input type="text" id="departure" name="departure" value={searchTerm} onChange={handleInputChange} className="mt-1 p-2 w-full border rounded-md"/>
-        <div className='bg-[#1f2937] w-[200px] z-10 mt-3 absolute'>
-        <ul className={showSuggestions && searchTerm?"h-20 text-white overflow-y-auto border p-4":'hidden'}>
+        <div className='bg-[#1f2937] w-[200px]  z-10 mt-3 absolute'>
+        <ul className={showSuggestions && searchTerm?"h-[200px] text-white overflow-y-scroll no-scrollbar border-none p-4":'hidden'}>
         { searchTerm && suggestions.map((term, index) => ( 
       <section className={handleInputChange?'flex cursor-pointer text-center':'hidden'} key={index} onClick={() => handleSelectSuggestion(term)}>
        {term}
@@ -83,8 +109,8 @@ const SearchBooking = forwardRef((
           <div>
             <label htmlFor="destination" className="block text-sm font-medium text-white">Arrival</label>
             <input type="text" id="destination" name="destination" value={dsearchTerm} onChange={dhandleInputChange} className="mt-1 p-2 w-full border rounded-md"/>
-         <div className='bg-[#1f2937] w-[200px] z-10 absolute'>
-         <ul className={dshowSuggestions && dsearchTerm?"h-20 text-white overflow-y-auto border p-4":"hidden"}>
+         <div className='bg-[#1f2937] w-[200px] mt-3 z-10 absolute'>
+         <ul className={dshowSuggestions && dsearchTerm?"h-[200px] text-white overflow-y-scroll no-scrollbar border-none p-4":"hidden"}>
         { dsearchTerm && dsuggestions.map((term, index) => ( 
       <section className={dhandleInputChange?'flex cursor-pointer text-center':'hidden'} key={index} onClick={() => dhandleSelectSuggestion(term)}>
        {term}

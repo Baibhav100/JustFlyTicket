@@ -3,6 +3,7 @@ import { FaCcPaypal } from "react-icons/fa";
 import { FaCcVisa } from "react-icons/fa";
 import { FaCcMastercard } from "react-icons/fa";
 import { FaCcDiscover } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -14,15 +15,15 @@ const Footer = () => {
 
 <footer className="bg-gray-800 text-white">
   <div className="container mx-auto p-8">
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    < div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
    
       <div className="mb-4">
         <h2 className="  mb-4 text-2xl font-bold">JustFlyTicket</h2>
         <ul>
           <li><a href="#" className="text-gray-300 hover:text-white">About Us</a></li>
-          <li><a href="#" className="text-gray-300 hover:text-white">Careers</a></li>
-          <li><a href="#" className="text-gray-300 hover:text-white">Contact</a></li>
+          <li><Link to="/flightdeals" className="text-gray-300 hover:text-white">Flight Deals</Link></li>
+          {/* <li><a href="#" className="text-gray-300 hover:text-white">Contact</a></li> */}
         </ul>
       </div>
 
@@ -35,7 +36,7 @@ const Footer = () => {
         </ul>
       </div>
       
-      <div className="mb-4">
+      {/* <div className="mb-4">
         <h2 className="text-lg font-semibold mb-4">Payments Available</h2>
         <ul>
           <li><a href="#" className="text-gray-300 hover:text-white">Paypal</a></li>
@@ -43,8 +44,11 @@ const Footer = () => {
           <li><a href="#" className="text-gray-300 hover:text-white">Mastercard</a></li>
           <li><a href="#" className="text-gray-300 hover:text-white">Discover</a></li> 
         </ul>
-      </div>
-      <div className="mb-4">
+      </div> */}
+      <div className="mb-4 flex">
+        <div className='w-[100%] flex justify-center h-[100%] mt-3'>
+        <p className='text-white'>We Accept</p>
+        </div>
         <ul className='flex gap-9'>
         <li><a href="#" className="text-gray-300 hover:text-white"><FaCcPaypal size={40}/></a></li>
           <li><a href="#" className="text-gray-300 hover:text-white"><FaCcVisa size={40}/></a></li>
@@ -61,9 +65,9 @@ const Footer = () => {
         <p className="text-gray-300">© 2023 JustFlyTicket All rights reserved.</p>
       </div>
       <div className="flex space-x-4">
-        <a href="#" className="text-gray-300 hover:text-white">Privacy Policy</a>
-        <a href="#" className="text-gray-300 hover:text-white">Terms of Service</a>
-        <a href="#" className="text-gray-300 hover:text-white">Sitemap</a>
+        <Link to="/Privacy" className="text-gray-300 hover:text-white">Privacy Policy</Link>
+        <Link to="/termsconditions" className="text-gray-300 hover:text-white">Terms and Conditions</Link>
+        {/* <Link to="" className="text-gray-300 hover:text-white">Sitemap</Link> */}
       </div>
     </div>
   </div>

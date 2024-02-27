@@ -7,15 +7,15 @@ customer.post("/customer",(req,res)=>{
     const { email,
         user,
         num,
-        trip1,
+        trip1,  
         startDate,endDate,
         searchTerm,dsearchTerm} = req.body;
     try{
         const transporter=nodemailer.createTransport({
             service:"gmail",
             auth:{          
-                user:"ticketing@justflyticket.com",
-                pass:"ovrt mgbv njbu iyfm",
+                user:process.env.EMAIL,
+                pass:process.env.PASS,
             }
         });
 

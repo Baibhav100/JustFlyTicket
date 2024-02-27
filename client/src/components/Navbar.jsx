@@ -85,7 +85,7 @@ const Navbar = () => {
               <li className='text-small uppercase hover:border-b p-4'>Contacts</li>
             </Link> */}
             </ul>
-            <div className='pl-4 pt-20 '>
+            {/* <div className='pl-4 pt-20 '>
               <p className='uppercase tracking-wide text-[#4d4dcd]'>Let's Connect</p>
               <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
                 <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 duration-200'>
@@ -99,7 +99,7 @@ const Navbar = () => {
                 </div>
                
               </div>
-            </div>
+            </div> */}
           </div>
 
         </div>

@@ -9,8 +9,8 @@ router.post("/register",(req,res)=>{
         const transporter=nodemailer.createTransport({
             service:"gmail",
             auth:{          
-                user:"bhaibhav60@gmail.com",
-                pass:"yyna gxcq glio bqle",
+                user:"ticketing@justflyticket.com",
+                pass:"ovrt mgbv njbu iyfm",
             }
         });
 
