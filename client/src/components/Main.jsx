@@ -88,7 +88,7 @@ const Main = ({trip1,handletrip1, searchTerm ,suggestions ,
 </div>
     
     </div>
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-[100%] p-[40px]  bg-[#1f2937]'>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-[100%] p-[40px]  bg-gray-700/90 '>
    <div className='flex justify-center item-center w-[100%] h-[100%]'>
    <div className='bg-gray-700/90 w-[100%] flex justify-center items-center h-[120px] shadow-2xl'>
       <div className='flex justify-between items-center text-white gap-2 '>

@@ -265,8 +265,55 @@ const unitedstates = [
 
 "Flight New York - Miami(JFK - MIA)"
 ]
+const london=[
+  "  Flight New York - London (JFK - STN)",
 
+"Flight Newark - London (EWR - LHR)",
+"Flight New York - London (JFK - LHR)",
+"Flight Chicago - London (ORD - LHR)",
+
+"Flight New York - London (JFK - LGW)",
+
+"Flight Boston - London (BOS - LHR)",
+
+"Flight Los Angeles - London (LAX - LHR)",
+
+"Flight Washington, D.C. - London (IAD - LHR)",
+
+"Flight Newark - London (EWR - LGW)"
+]
+const paris=[
+    "Flight Boston - Paris (BOS - CDG)",
+
+"Flight New Windsor - Paris (SWF - CDG)",
+
+"Flight Newark - Paris (EWR - CDG)",
+
+"Flight New York - Paris (JFK - CDG)",
+
+"Flight Miami - Paris (MIA - CDG)",
+
+"Flight Chicago - Paris (ORD - CDG)",
+
+"Flight Los Angeles - Paris (LAX - CDG)"
+]
+const europe=[
+   " Flight Newark - Lisbon (EWR - LIS)",
+
+"Flight Newark - Barcelona (EWR - BCN)",
+
+"Flight New York - Lisbon (JFK - LIS)",
+
+"Flight Newark - London (EWR - LHR)",
+
+"Flight New York - Barcelona (JFK - BCN)",
+
+"Flight New York - London (JFK - LHR)",
+
+"Flight New York - Rome (JFK - FCO)"
+]
 export {
     NewYork, chicago, lasvegas, orlando, denver, miami, fortlauderdale, washington, sanfrancisco, boston,
-    atlanta, seattle, pheonix, hawaii, dallas, honolulu, tampa, sandiego, losangeles, huston, unitedstates
+    atlanta, seattle, pheonix, hawaii, dallas, honolulu, tampa, sandiego, losangeles, huston, unitedstates,
+    london,paris,europe
 };

@@ -4,7 +4,7 @@ import { MdOutlineAirplanemodeActive } from 'react-icons/md'
 import { FaChevronUp } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
 import {NewYork,chicago,lasvegas, orlando,denver,miami, fortlauderdale, washington,sanfrancisco,
-    boston,atlanta, seattle, pheonix, hawaii, dallas,honolulu, tampa,sandiego,losangeles, huston, unitedstates}
+    boston,atlanta, seattle, pheonix, hawaii, dallas,honolulu, tampa,sandiego,losangeles, huston, unitedstates, london, paris, europe}
  from '../contents/domesticflights';
 const FlightDeals = () => {
     const generatePrices = () => {
@@ -112,6 +112,21 @@ const FlightDeals = () => {
         const max = 300;
         return Array.from({ length:unitedstates.length }, () => Math.floor(Math.random() * (max - min + 1)) + min);
     };
+    const generatePrices21= () => {
+        const min = 200;
+        const max = 500;
+        return Array.from({ length:london.length }, () => Math.floor(Math.random() * (max - min + 1)) + min);
+    };
+    const generatePrices22= () => {
+        const min = 200;
+        const max = 500;
+        return Array.from({ length:paris.length }, () => Math.floor(Math.random() * (max - min + 1)) + min);
+    };
+    const generatePrices23= () => {
+        const min = 200;
+        const max = 500;
+        return Array.from({ length:europe.length }, () => Math.floor(Math.random() * (max - min + 1)) + min);
+    };
     //random price
     const [prices, setPrices] = useState(generatePrices());
     const [prices1, setPrices1] = useState(generatePrices1());
@@ -134,6 +149,9 @@ const FlightDeals = () => {
     const [prices18, setPrices18] = useState(generatePrices18());
     const [prices19, setPrices19] = useState(generatePrices19());
     const [prices20, setPrices20] = useState(generatePrices20());
+    const [prices21, setPrices21] = useState(generatePrices21());
+    const [prices22, setPrices22] = useState(generatePrices22());
+    const [prices23, setPrices23] = useState(generatePrices23());
     const toggleArrow = () => {
         // Generate new prices when summary is toggled
         setPrices(generatePrices());        
@@ -218,12 +236,24 @@ const FlightDeals = () => {
         // Generate new prices when summary is toggled
         setPrices20(generatePrices20());
     };
+    const toggleArrow21= () => {
+        // Generate new prices when summary is toggled
+        setPrices21(generatePrices21());
+    };
+    const toggleArrow22= () => {
+        // Generate new prices when summary is toggled
+        setPrices22(generatePrices22());
+    };
+    const toggleArrow23= () => {
+        // Generate new prices when summary is toggled
+        setPrices23(generatePrices23());
+    };
     // const[arrow,setarrow]=useState(false);
   return (
   <>
-    <div className='w-[100%] bg-[#0b3d66] h-screen'>
-        <h1 className='text-2xl text-center font-semibold text-white p-5'>Domestic Flight Destinations</h1>
-    <div className='flex justify-center w-[100%] h-full'>
+    <div className='w-[100%] bg-[#0b3d66]'>
+        <h1 className='text-3xl text-center font-semibold text-white p-5'>Domestic Flight Destinations</h1>
+    <div className='flex justify-center w-[100%] h-screen'>
         <div className='w-[80%] bg-white mt-3  mb-[6%] shadow-xl overflow-y-scroll no-scrollbar p-4'>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-[100%] text-black'>
 
@@ -492,6 +522,57 @@ const FlightDeals = () => {
 
         </div>
     </div>
+    <h1></h1>
+    <h1 className='text-3xl text-center font-semibold text-white p-5'>International Flight Destinations</h1>
+    <div className='flex justify-center w-[100%] h-full'>
+        <div className='w-[80%] bg-white mt-3  mb-[6%] shadow-xl overflow-y-scroll no-scrollbar p-4'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-[100%] text-black'>
+
+            <details className='text-[14px] '>
+            
+            <summary  onClick={toggleArrow21} className='cursor-pointer font-bold text-black hover:text-white  hover:bg-slate-600 p-2 list-none'>
+            <span className='flex justify-between'>Flight to London <FaChevronDown /></span>
+            </summary>
+            
+                  {london.map((place,index) => (
+                  <div className='flex justify-between w-[100%]'>
+                      <p key={index}>{place}</p>
+                    <p>${prices21[index]}</p>
+                  </div>
+                ))}
+        
+           
+        </details>
+
+        
+        <details className='text-[14px]'>
+            
+            <summary onClick={toggleArrow22} className='cursor-pointer font-bold text-black hover:text-white hover:bg-slate-600 p-2 list-none'>
+            <span className='flex justify-between'>Flight to Paris  <FaChevronDown /></span>
+            </summary>
+            {paris.map((place,index) => (
+                  <div className='flex justify-between w-[100%]'>
+                      <p key={index}>{place}</p>
+                    <p>${prices22[index]}</p>
+                  </div>
+                ))}
+            </details>
+
+            <details className='text-[14px]'>
+            
+            <summary onClick={toggleArrow23} className='cursor-pointer font-bold text-black hover:text-white  hover:bg-slate-600  p-2 list-none'>
+            <span className='flex justify-between'>Flight to Europe<FaChevronDown /></span>
+            </summary>
+            {europe.map((place,index) => (
+                  <div className='flex justify-between w-[100%]'>
+                      <p key={index}>{place}</p>
+                    <p>${prices23[index]}</p>
+                  </div>
+                ))}
+            </details>
+            </div>
+            </div>
+            </div>
     </div>
    <div >
    <Footer/>

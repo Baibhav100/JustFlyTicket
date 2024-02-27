@@ -13,51 +13,50 @@ const About1 = () => {
   <div>
     <Popup/>
   </div>
-    <div className='w-[100%] h-screen'>
-    <div className='w-[100%] h-screen flex justify-center items-center bg-[url(https://wallpapercave.com/wp/wp12411255.jpg)] bg-cover bg-no-repeat'>
-
-<div className='w-[70%] h-screen  lg:w-[80%] lg:flex justify-center'>
-<div className="bg-white/50 w-full h-screen overflow-y-scroll no-scrollbar lg:overflow-hidden">
-<div className="container mx-auto py-12 px-4">
-<div className="flex flex-col md:flex-row lg:flex-row items-center">
-<div className="md:w-1/2 flex">
-<img className='w-[100px] h-[100px] md:w-[200px] md:h-[200px] rounded-[50%]' src="https://www.thetimes.co.uk/travel/wp-content/uploads/sites/6/2022/01/USE_Pagoda-overlooking-Mount-Fuji-Japan_Credit_GettyImages-520571022.jpg?w=2200&h=880&crop=1" alt="" />
-<img className='w-[100px] h-[100px] md:w-[200px] md:h-[200px] mt-[80px] ml-[-60px] rounded-[50%] z-10' src="https://i.insider.com/5d37715d36e03c3ec304ccd6?width=1000&format=jpeg&auto=webp" alt="" />
-<img className='w-[100px] h-[100px] md:w-[200px] md:h-[200px] rounded-[50%] ml-[-60px]' src="https://hblimg.mmtcdn.com/content/hubble/img/maldives/mmt/destination/t_trp/m_Maldives_l_400_640.jpg?im=Resize=(540,214.5)" alt="" />
-</div>
-<div className="md:w-1/2 md:ml-8">
-<p className="mb-4 text-justify first-letter:text-[50px] first-letter:text-[#1f2937] first-letter:font-bold">
-   It consist of a passionate team of travel enthusiasts dedicated to crafting exceptional journeys 
-  and making travel dreams come true. With years of experience in the industry, we take pride in our commitment 
-  to quality, personalized service, and creating unforgettable memories for our clients.
+    <div className='w-[100%]  bg-slate-500 h-screen'>
+    {/* <div className='w-[100%] h-screen flex justify-center items-center bg-[url(https://wallpapercave.com/wp/wp12411255.jpg)] bg-cover bg-no-repeat'> */}
+    <div className='w-[100%] h-screen flex justify-center items-center text-black bg-cover bg-no-repeat'>
+<div className='w-[90%] h-screen  lg:w-[80%] lg:flex justify-center'>
+<div className="bg-gray-100 overflow-hidden w-full h-screen overflow-y-scroll no-scrollbar mb-9">
+<div className="container mx-auto p-10 ">
+  <h1 className='text-3xl font-semibold text-center'>About Us</h1>
+  <p className='text-justify py-3'>We at JustFlyTicket are dedicated to making your travel experience as convenient,
+affordable, and efficient as possible. The excitement of exploring new places is something we
+appreciate no matter where you travel for work or pleasure. Our goal is to provide a hassle-
+free flight booking process with competitive pricing and outstanding customer service.
 </p>
-<p className="text-gray-700 mb-4 text-justify">
-  Our mission is to inspire and empower travelers to explore the world, discover new cultures, and connect with 
-  people from all walks of life. Whether you're seeking a relaxing beach getaway, a thrilling adventure, or a 
-  cultural immersion, we have the expertise to tailor the perfect itinerary for you.
+<h1 className='text-3xl font-semibold text-center '>Who Are We?</h1>
+<p className='text-justify py-3'>We recognize the need for an easy-to-use flight booking and reservations platform that offers
+comprehensive options. We wanted to create an online platform that provided various travel
+services for today’s travellers, based on our experience in the travel industry.
 </p>
-</div>
-</div>
-
-<h2 className="text-2xl font-bold text-gray-800 mb-4 mt-2">Why Choose JustflyTicket?</h2>
-
-<ul className="list-disc text-gray-700 mb-8 pl-6">
-<li>Personalized Travel Experiences</li>
-<li>Expert Destination Knowledge</li>
-<li>24/7 Customer Support</li>
-<li>Exclusive Travel Deals</li>
-<li>Community and Sustainability Initiatives</li>
-</ul>
-
-<p className="text-gray-700">
-JustFlyTicket is more than just a travel company; we are your dedicated travel partners, 
-committed to ensuring every journey is seamless, enjoyable, and filled with remarkable moments. 
-Let us turn your travel dreams into reality.
+<h1 className='text-3xl font-semibold text-center'>Our Mission</h1>
+<p className='py-3 text-justify'>Our goal is to make the flight ticket booking process as simple and easy as possible by
+providing a fast, reliable, and user-friendly service. We want our customers to be able to book
+their flight tickets with just a few clicks. We strive to ensure that the booking process is secure and
+that our customers receive the best service possible. Through a variety of flight options,
+personalized recommendations based on customer preferences, and secure payment systems,
+we provide customers with a wide range of flight options. As well as offering 24/7 customer
+service, we make sure our customers have access to information whenever they need it.
 </p>
-{/* <div className='flex'>
-<img className='rounded-[50%] w-[300px] h-[300px]  transform transition-transform duration-300 group-hover:scale-110 'src="https://getwalls.io/wallpapers/310525/2020--04--goa-4k-mobile-2020-1080p-pc.jpg" alt="" />
-</div> */}
-
+<h1 className='text-3xl font-semibold text-center'>Why Choose Us?</h1>
+<p className='text-center py-3'>Our goal is to provide low-cost airline tickets around the world. Join us and travel around the
+world for an affordable price.</p>
+<p className='font-bold py-3'>Lowest prices</p>
+<p>We compare thousands of travel websites and airline deals to provide you with the most
+affordable and competitive prices possible.</p>
+<p className='font-bold py-3'>An easy-to-use website</p>
+<p>An awesome user experience begins with simplicity. We have designed our platform to cater
+to the needs of travelers so that they can enjoy smooth, easy, and enjoyable travel.
+</p>
+<p className='font-bold py-3'>Quick and easy</p>
+<p>Our goal is to provide you with an unparalleled flight booking experience that combines
+dependability and consistency.
+</p>
+<p className='font-bold py-3'>24x7 Service</p>
+<p>In order to ensure you have a hassle-free and enjoyable experience, our customer service
+representatives are available 24/7 to assist you at every stage of your journey.
+</p>
 
 </div>
 
@@ -67,47 +66,7 @@ Let us turn your travel dreams into reality.
 </div>
 
 </div>
-<div className='flex justify-center items-center w-[100%] bg-slate-400 p-10'>
-  <div className='w-[80%]'>
-    <div className='flex justify-center items-center'>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[100%] gap-8'>
-       <div className='w-full h-[200px] hover:scale-105 duration-200 shadow-2xl bg-slate-900 flex justify-center items-center '>
-        <div className='w-[80%] h-[80%] '>
-          <div className='flex justify-center items-center w-[100%] h-[60%]'><div className='w-[50px] h-[50px] bg-slate-200 rounded-[50%] flex justify-center items-center'>< MdOutlinePhone/></div></div>
-          <div className='text-white flex w-[100%] justify-center text-xl font-semibold'>24/7 Assistance</div>
-          <div>
-      
-      </div> 
 
-        </div>
-       </div>
-       <div className='w-full h-[200px]  hover:scale-105 duration-200 shadow-2xl bg-slate-900 flex justify-center items-center '>
-        <div className='w-[80%] h-[80%] '>
-          <div className='flex justify-center items-center w-[100%] h-[60%]'><div className='w-[50px] h-[50px] bg-slate-200 rounded-[50%] flex justify-center items-center'><  MdCardTravel/></div></div>
-          <div className='text-white flex w-[100%] justify-center text-xl font-semibold'>Affordable Travelling</div>
-          <div>
-      
-      </div> 
-
-        </div>
-       </div>
-      
-       <div className='w-full h-[200px]  hover:scale-105 duration-200 shadow-2xl bg-slate-900 flex justify-center items-center '>
-        <div className='w-[80%] h-[80%] '>
-          <div className='flex justify-center items-center w-[100%] h-[60%]'><div className='w-[50px] h-[50px] bg-slate-200 rounded-[50%] flex justify-center items-center'>< FaUser/></div></div>
-          <div className='text-white flex w-[100%] justify-center text-xl font-semibold'>Travel Experiences</div>
-          <div>
-      
-      </div> 
-
-        </div>
-       </div>
-      </div>
-
-    </div>
-
-  </div>
-</div>
 <div> 
     <button className='fixed z-10 right-[2%] top-[80%] ml-9 text-small uppercase animate-bounce bg-[#C70039] rounded-[50%] p-4  text-white hover:border-b'><a href="tel:+18883506579">< AiOutlinePhone size={30}/></a></button>
   </div>
