@@ -11,7 +11,8 @@ const middleeast=[{
     country:"Algeria",
     place:"Algiers",
     price:"$722",
-    image:"https://e0.pxfuel.com/wallpapers/100/134/desktop-wallpaper-algeria-algeria-background-mosque-algeria-algiers.jpg"
+    image:"https://e0.pxfuel.com/wallpapers/100/134/desktop-wallpaper-algeria-algeria-background-mosque-algeria-algiers.jpg",
+    deals:"Limited Deals!"
 
 },
 {
@@ -27,7 +28,8 @@ const middleeast=[{
     country:"Egypt",
     place:"Cairo",
     price:"$668",
-    image:"https://wallpapers.com/images/hd/cairo-city-skyline-6un754fqkwlg7edt.jpg"
+    image:"https://wallpapers.com/images/hd/cairo-city-skyline-6un754fqkwlg7edt.jpg",
+    deals:"Limited Deals!"
 
 
 },
@@ -45,7 +47,8 @@ const middleeast=[{
     country:"Morocco",
     place:"Casablanca",
     price:"$583",
-    image:"https://e0.pxfuel.com/wallpapers/604/714/desktop-wallpaper-beautiful-of-casablanca-morocco.jpg"
+    image:"https://e0.pxfuel.com/wallpapers/604/714/desktop-wallpaper-beautiful-of-casablanca-morocco.jpg",
+    deals:"Limited Deals!"
 
 },
 {
@@ -53,7 +56,8 @@ const middleeast=[{
     country:"Lebanon",
     place:"Beirut",
     price:"$692",
-    image:"https://mediaim.expedia.com/destination/1/3e8985ad7ea5c934c4b00f6025a66f56.jpg"
+    image:"https://mediaim.expedia.com/destination/1/3e8985ad7ea5c934c4b00f6025a66f56.jpg",
+    deals:"Limited Deals!"
 
 },
 {
@@ -69,7 +73,8 @@ const middleeast=[{
     country:"Qatar",
     place:"Doha",
     price:"$721",
-    image:"https://a.travel-assets.com/findyours-php/viewfinder/images/res70/481000/481990-Doha-And-Vicinity.jpg"
+    image:"https://a.travel-assets.com/findyours-php/viewfinder/images/res70/481000/481990-Doha-And-Vicinity.jpg",
+    deals:"Limited Deals!"
 }
 
 ];

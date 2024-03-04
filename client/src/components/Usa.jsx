@@ -27,8 +27,9 @@ const Usa = ({scrolltocomponent}) => {
             </div>
             <p className='text-2xl font-semibold'>{item.place}</p>
             </div>
-            <div className='bg-[#ffe03c] w-[70px] h-[30px] flex justify-center items-center'>
-              <p className='text-xl'>{item.price}</p>
+            <div className='bg-[#ffe03c] w-[70px] h-[30px] flex-col justify-center items-center'>
+              <p className='text-xl text-center'>{item.price}</p>
+              <p className='text-[13px] mt-3 ml-[-30%] text-red-700 font-bold'>{item.deals}</p>
             </div>
           </div>
         </div>

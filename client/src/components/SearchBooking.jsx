@@ -41,16 +41,19 @@ const SearchBooking = forwardRef((
  <>
  <div className='w-[100%] lg:h-[500px] relative'>
     <div ref={ref}>
-    <img className='bg-cover object-fill w-[100%] h-[500px]'src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="plane"/>
+    <div className='h-[500px] w-[100%] overflow-hidden'>
+  <img className='object-cover bg-center bg-fixed w-full h-full' src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="plane"/>
+</div>
+
       <div className='w-[100%] h-screen absolute top-0'>
         <div className='w-[100%] h-screen flex justify-center items-center'>
          <div className='w-[100%] flex h-screen justify-center item-center'>
-         <div className='h-screen'>
-         <div className='flex justify-center items-center gap-3 w-[200px] lg:h-[50px] text-white bg-[#1f2937] lg:mt-3'>
-            <p>Flights</p>
+         <div className='h-screen lg:mt-[6%]'>
+         <div className='flex justify-center items-center gap-3 w-[400px] lg:h-[50px] text-white bg-[#1f2937] lg:mt-3'>
+            <p> Book Flights</p>
             <GiCommercialAirplane/>
           </div>
-          <div className='w-[100%] sm:h-[470px] lg:h-[250px] bg-black/40'>
+          <div className='sm:w-[100%] md:w-[100%] lg:w-[100%] sm:h-[470px] lg:h-[250px] bg-black/50'>
           {/* <Contents trip1={trip1} handletrip1={handletrip1} searchTerm={searchTerm} suggestions={suggestions} 
     showSuggestions={showSuggestions} dshowSuggestions={dshowSuggestions} dsearchTerm={dsearchTerm} dsuggestions={dsuggestions
     } dhandleSelectSuggestion={dhandleSelectSuggestion} handleSelectSuggestion={handleSelectSuggestion}
@@ -73,7 +76,7 @@ const SearchBooking = forwardRef((
       value="oneway"
       checked={trip1 === "oneway"}
       onChange={handletrip1}
-      className="mr-1"
+      className="mr-1 font-bold form-radio text-2xl"
     />
     One Way
   </label>
@@ -85,7 +88,7 @@ const SearchBooking = forwardRef((
       value="roundtrip"
       checked={trip1 === "roundtrip"}
       onChange={handletrip1}
-      className="mr-1"
+      className="mr-1 font-bold form-radio text-2xl"
     />
     Round Trip
   </label>

@@ -4,7 +4,7 @@ const asiaocean=[{
     place:"Manila",
     price:"$785",
     image:"https://media.istockphoto.com/id/1196930302/photo/port-of-manila.webp?b=1&s=170667a&w=0&k=20&c=LlgSCJtolrGYFb0jAuvC_ClQXyGJb_e0eK9IlJ8Pm3s=",
-
+    deals:"Limited Deals!"
 },
 {
     id:2,
@@ -19,7 +19,8 @@ const asiaocean=[{
     country:"Thailand",
     place:"Bangkok",
     price:"$827",
-    image:"https://w.forfun.com/fetch/b8/b8d2835f54282fed6973e20c63e24321.jpeg"
+    image:"https://w.forfun.com/fetch/b8/b8d2835f54282fed6973e20c63e24321.jpeg",
+    deals:"Limited Deals!"
 
 },
 {
@@ -36,7 +37,9 @@ const asiaocean=[{
     country:"Japan",
     place:"Tokyo",
     price:"$1,044",
-    image:"https://c4.wallpaperflare.com/wallpaper/26/528/57/tokyo-tokyo-tower-japan-asia-wallpaper-preview.jpg"
+    image:"https://c4.wallpaperflare.com/wallpaper/26/528/57/tokyo-tokyo-tower-japan-asia-wallpaper-preview.jpg",
+    deals:"Limited Deals!"
+    
 
 
 },
@@ -45,7 +48,8 @@ const asiaocean=[{
     country:"Philippines",
     place:"Cebu",
     price:"$785",
-    image:"https://c1.wallpaperflare.com/preview/349/913/154/city-light-city-cityscape-city-evening.jpg"
+    image:"https://c1.wallpaperflare.com/preview/349/913/154/city-light-city-cityscape-city-evening.jpg",
+    deals:"Limited Deals!"
 
 },
 {
@@ -61,7 +65,8 @@ const asiaocean=[{
     country:"New Zealand",
     place:"Auckland",
     price:"$1,298",
-    image:"https://e0.pxfuel.com/wallpapers/148/955/desktop-wallpaper-auckland-10-3720-x-2480-auckland-city.jpg"
+    image:"https://e0.pxfuel.com/wallpapers/148/955/desktop-wallpaper-auckland-10-3720-x-2480-auckland-city.jpg",
+    deals:"Limited Deals!"
 
 },
 {    

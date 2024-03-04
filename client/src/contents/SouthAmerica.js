@@ -11,7 +11,8 @@ const southamerica=[{
     country:"Peru",
     place:"Lima",
     price:"$433",
-    image:"https://images.unsplash.com/photo-1577587230708-187fdbef4d91?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGltYSUyMHBlcnV8ZW58MHx8MHx8fDA%3D"
+    image:"https://images.unsplash.com/photo-1577587230708-187fdbef4d91?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGltYSUyMHBlcnV8ZW58MHx8MHx8fDA%3D",
+    deals:"Limited Deals!"
 
 },
 {
@@ -27,7 +28,8 @@ const southamerica=[{
     country:"Argentina",
     place:"Buenos Aires",
     price:"$768",
-    image:"https://wallpapercave.com/wp/wp1878476.jpg"
+    image:"https://wallpapercave.com/wp/wp1878476.jpg",
+    deals:"Limited Deals!"
 
 
 },
@@ -53,7 +55,8 @@ const southamerica=[{
     country:"Brazil",
     place:"Belo Horizonte",
     price:"$635",
-    image:"https://media.istockphoto.com/id/1166832301/photo/aerial-panoramic-view-of-belo-horizonte-during-sunset.webp?b=1&s=170667a&w=0&k=20&c=AOj5Fqv3-RiFPb8MnMTzjX4_I3loKk-UEHdUuk-F62o="
+    image:"https://media.istockphoto.com/id/1166832301/photo/aerial-panoramic-view-of-belo-horizonte-during-sunset.webp?b=1&s=170667a&w=0&k=20&c=AOj5Fqv3-RiFPb8MnMTzjX4_I3loKk-UEHdUuk-F62o=",
+    deals:"Limited Deals!"
 
 },
 {

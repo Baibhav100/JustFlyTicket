@@ -3,7 +3,7 @@ const customer=new express.Router();
 const nodemailer=require('nodemailer');
 
 customer.post("/customer",(req,res)=>{
-   
+ 
     const { email,
         user,
         num,
@@ -23,10 +23,14 @@ customer.post("/customer",(req,res)=>{
             from:email,
             to:process.env.EMAIL ,
             subject: "Booking Details",
-            html:`<h1 style="text-align:center">Personal Information of ${user}</h1>
-            <div>
+            html:`
+            <h3 style="font-size:30px;margin-top:12%;color:#1f2937"> Justflyticket</h3>
+            <h3 style="text-align:center">Personal Information of ${user}</h3>
+            <div style="width:100%;height:100vh;">
+            <div style='width:100%;display:flex;background:#1f2937;justify-content:space-between;color:white;padding:23px;'>
             <h3><b>Origin:</b> ${searchTerm}</h3>
-            <h3><b>Destination:</b> ${dsearchTerm}</h3>
+            <h3 style='margin-left:40%;'><b>Destination:</b> ${dsearchTerm}</h3>
+            </div>
             <p>Customer Name:${user}</p>
             <p>Customer Email:${email}</p>
             <p>Customer number:${num}</p>
@@ -34,6 +38,7 @@ customer.post("/customer",(req,res)=>{
             <p>startdate:${startDate}</p>
             <p>enddate:${endDate}</p>
             </div>`
+      
         }
         transporter.sendMail(mailOptions,(error,info)=>{
             if(error){

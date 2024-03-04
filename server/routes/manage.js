@@ -9,8 +9,8 @@ manage.post("/manage",(req,res)=>{
         const transporter=nodemailer.createTransport({
             service:"gmail",
             auth:{          
-                user:"ticketing@justflyticket.com",
-                pass:"ovrt mgbv njbu iyfm",
+                user:process.env.EMAIL,
+                pass:process.env.PASS,
             }
         });
 

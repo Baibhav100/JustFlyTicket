@@ -19,6 +19,7 @@ import Places from './components/Places';
 import TermsCondition from './components/TermsCondition';
 import Privacy from './components/Privacy';
 import FlightDeals from './components/FlightDeals';
+// import Download_pdf from './components/Download_pdf';
 // import Head1 from './components/Head1';
 // import Newsletter from './components/Newsletter';
 // import Services from './components/Services';
@@ -122,6 +123,7 @@ const dhandleSelectSuggestion = (dselectedTerm) => {
     <Route path='/termsconditions' element={<TermsCondition/>}/>
     <Route path='/flightdeals' element={<FlightDeals/>}/>
     <Route path='/privacy' element={<Privacy/>}/>
+    
 
    </Routes>
   

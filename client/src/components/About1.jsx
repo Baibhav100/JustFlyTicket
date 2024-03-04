@@ -20,7 +20,7 @@ const About1 = () => {
 <div className="bg-gray-100 overflow-hidden w-full h-screen overflow-y-scroll no-scrollbar mb-9">
 <div className="container mx-auto p-10 ">
   <h1 className='text-3xl font-semibold text-center'>About Us</h1>
-  <p className='text-justify py-3'>We at JustFlyTicket are dedicated to making your travel experience as convenient,
+  <p className='text-justify py-3'>We at Justflyticket are dedicated to making your travel experience as convenient,
 affordable, and efficient as possible. The excitement of exploring new places is something we
 appreciate no matter where you travel for work or pleasure. Our goal is to provide a hassle-
 free flight booking process with competitive pricing and outstanding customer service.

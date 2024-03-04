@@ -68,7 +68,7 @@ const Main = ({trip1,handletrip1, searchTerm ,suggestions ,
 </div>
 </div>
 <div className='bg-[#1f2937] p-2 text-white flex justify-initial items-center w-[100%]'>
-     <div className="text-2xl font-semibold mb-4 ml-[2%] mt-4">Book Your Flights Tickets</div>
+     <marquee className="text-2xl mb-4 ml-[2%] mt-4 duration-160">Book Your Flights Tickets <span className='px-4'>|</span> Get Phone Only Discounted Deals <span className='px-4'>|</span> Easy Booking, Changes & Cancellations <span className='px-4'>|</span> Call Us Now +1(888) 350-6579</marquee>
      
  </div>
 <div>

@@ -85,9 +85,9 @@ const Book = ({startDate,endDate,handleStartChange,selectedTrip,handleTrip,Passe
 
      </div>
      <button className='text-white font-bold mt-10 bg-[#e51937] py-[10px] px-[20px]' onClick={handleform}>Book Now</button>
-    <div className={!form?'w-[100%] bg-gray-500 h-[30vh] my-5':'hidden'}>
+    <div className={!form?'w-[100%]  my-5':'hidden'}>
       <div className='flex justify-center items-center w-[100%] h-full'>
-        <h2 className='text-3xl text-white'>Hurry! Book Your Tickets</h2>
+        <img className='rounded-xl'src={require('../images/Deals.png')} alt="" />
       </div>
    </div>
     <div className={!form?'hidden':'flex'}>

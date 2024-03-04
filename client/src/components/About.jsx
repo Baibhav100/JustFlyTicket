@@ -2,8 +2,8 @@ import React from 'react'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css'
-import Flipping from './Flipping';
-import Sliders from './Sliders';
+// import Flipping from './Flipping';
+// import Sliders from './Sliders';
 
 const About = () => {
   const settings = {
@@ -33,11 +33,11 @@ const About = () => {
 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
 
 
-     <Flipping frontImage={require('../images/Paris1.jpg')} backText="Paris"/>
+     {/* <Flipping frontImage={require('../images/Paris1.jpg')} backText="Paris"/>
      <Flipping frontImage={require('../images/NewYork1.jpg')} backText="New York"/>
      <Flipping frontImage={require('../images/Miami1.jpg')}  backText="Miami"/>
       <Flipping frontImage={require('../images/tokyo.jpg')} backText="Tokyo"/>
-  
+   */}
 </div>
 
  </div>

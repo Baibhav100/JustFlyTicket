@@ -7,7 +7,7 @@ const customer=require('./routes/customer');
 const contact=require('./routes/contact');
 const cors=require('cors');
 
-const port= 8006; 
+const port= process.env.PORT || 8006; 
 //get
 app.use(express.json());
 app.use(cors());

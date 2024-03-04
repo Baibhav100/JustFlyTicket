@@ -4,6 +4,7 @@ const europe=[{
     place:"Rome",
     price:"$470",
     image:"https://c4.wallpaperflare.com/wallpaper/377/82/449/5bf55b183fa85-wallpaper-preview.jpg",
+    deals:"Limited Deals!"
 
 },
 {
@@ -11,7 +12,8 @@ const europe=[{
     country:"Greece",
     place:"Athens",
     price:"$487",
-    image:"https://wallpapers-hub.art/wallpaper-images/42008.jpg"
+    image:"https://wallpapers-hub.art/wallpaper-images/42008.jpg",
+    deals:""
 
 },
 {
@@ -36,7 +38,8 @@ const europe=[{
     country:"Spain",
     place:"Barcelona",
     price:"$469",
-    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3772tQmQW94Qxt8BM7NfwHoWmqYAxRwf5uUjTAINL6w&s"
+    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3772tQmQW94Qxt8BM7NfwHoWmqYAxRwf5uUjTAINL6w&s",
+    deals:"Limited Deals!"
 
 
 },
@@ -45,7 +48,8 @@ const europe=[{
     country:"France",
     place:"Paris",
     price:"$425",
-    image:"https://c4.wallpaperflare.com/wallpaper/132/818/377/eiffel-tower-cityscape-city-landmark-wallpaper-preview.jpg"
+    image:"https://c4.wallpaperflare.com/wallpaper/132/818/377/eiffel-tower-cityscape-city-landmark-wallpaper-preview.jpg",
+    deals:"Limited Deals!"
 
 },
 {
@@ -61,7 +65,8 @@ const europe=[{
     country:"Portugal",
     place:"Lisbon",
     price:"$557",
-    image:"https://w0.peakpx.com/wallpaper/788/679/HD-wallpaper-lisbon-morning-sunrise-cityscape-bridge-lisbon-panorama-portugal.jpg"
+    image:"https://w0.peakpx.com/wallpaper/788/679/HD-wallpaper-lisbon-morning-sunrise-cityscape-bridge-lisbon-panorama-portugal.jpg",
+    
 
 },
 {    
@@ -69,7 +74,9 @@ const europe=[{
     country:"Italy",
     place:"Venice",
     price:"$475",
-    image:"https://images6.alphacoders.com/546/546467.jpg"
+    image:"https://images6.alphacoders.com/546/546467.jpg",
+    deals:"Limited Deals!"
+
 }
 
 ];

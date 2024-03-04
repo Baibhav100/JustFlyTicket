@@ -4,6 +4,7 @@ const usa=[{
     place:"New York",
     price:"$785",
     image:"https://wallpapers.com/images/featured/new-york-city-5oaa14h4mw6w3o71.jpg",
+    deals:"Limited Deals!"
 
 },
 {
@@ -19,7 +20,8 @@ const usa=[{
     country:"Usa",
     place:"San Francisco",
     price:"$827",
-    image:"https://i.pinimg.com/originals/19/8f/8a/198f8a79b7d4eb212964fd1d792ae366.jpg"
+    image:"https://i.pinimg.com/originals/19/8f/8a/198f8a79b7d4eb212964fd1d792ae366.jpg",
+    deals:"Limited Deals!"
 
 },
 {
@@ -27,7 +29,8 @@ const usa=[{
     country:"Usa",
     place:"Orlando",
     price:"$1,019",
-    image:"https://images.unsplash.com/photo-1609184889233-eff6dd93def4?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b3JsYW5kb3xlbnwwfHwwfHx8MA%3D%3D"
+    image:"https://images.unsplash.com/photo-1609184889233-eff6dd93def4?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b3JsYW5kb3xlbnwwfHwwfHx8MA%3D%3D",
+    deals:"Limited Deals!"
 
 
 },
@@ -45,7 +48,8 @@ const usa=[{
     country:"Usa",
     place:"San Diego",
     price:"$785",
-    image:"https://images.unsplash.com/photo-1514939775307-d44e7f10cabd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2FuJTIwZGllZ298ZW58MHx8MHx8fDA%3D"
+    image:"https://images.unsplash.com/photo-1514939775307-d44e7f10cabd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2FuJTIwZGllZ298ZW58MHx8MHx8fDA%3D",
+    deals:"Limited Deals!"
 
 },
 {
@@ -53,7 +57,8 @@ const usa=[{
     country:"Usa",
     place:"Las Vegas",
     price:"$1,275",
-    image:"https://c1.wallpaperflare.com/preview/548/535/741/las-vegas-vegas-strip-vegas-strip.jpg"
+    image:"https://c1.wallpaperflare.com/preview/548/535/741/las-vegas-vegas-strip-vegas-strip.jpg",
+  
 
 },
 {
@@ -69,7 +74,8 @@ const usa=[{
     country:"Usa",
     place:"Grand Canyon",
     price:"$1,039",
-    image:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Canyon_River_Tree_%28165872763%29.jpeg/1200px-Canyon_River_Tree_%28165872763%29.jpeg"
+    image:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Canyon_River_Tree_%28165872763%29.jpeg/1200px-Canyon_River_Tree_%28165872763%29.jpeg",
+    deals:"Limited Deals!"
 }
 
 ];

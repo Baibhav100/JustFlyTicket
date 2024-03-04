@@ -15,7 +15,7 @@ const Navbar = () => {
     <div className='w-full h-20 z-20 shadow-xl top-0 left-0 bg-[#1f2937] 'id='1'>
       <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
       <div className='flex'>
-      <h2 className='sm:text-2xl md:text-3xl text-xl text-white font-bold'><Link to="/">JustFlyTicket</Link></h2>
+      <h2 className='sm:text-2xl md:text-3xl text-xl text-white font-bold'><Link to="/">Justflyticket</Link></h2>
        <div className='text-white transform rotate-90'><MdOutlineAirplanemodeActive /></div>
       </div>
         <div>
@@ -26,12 +26,16 @@ const Navbar = () => {
                  <p className='text-xl md:text-2xl lg:text-3xl font-bold text-white'>+1 (888) 350-6579</p>
                 
                 </div>        
-              <li className='ml-10 text-small hover:border-b text-white cursor-pointer'><Link to='/'>Home</Link></li>
+              {/* <li className='ml-10 text-small hover:border-b text-white cursor-pointer'><Link to='/'>Home</Link></li> */}
+              <Link to='/'><li className='ml-10 text-small hover:border-b text-white cursor-pointer'>Home</li></Link>
+              <Link to='/about'><li className='ml-10 text-small hover:border-b text-white cursor-pointer'>About</li></Link>
+              <Link to='/contact'><li className='ml-10 text-small hover:border-b text-white cursor-pointer'>Contact</li></Link>
+
      
-              <li className='ml-10 text-small  hover:border-b text-white cursor-pointer'><Link to='/about'>About</Link></li>
+              {/* <li className='ml-10 text-small  hover:border-b text-white cursor-pointer'><Link to='/about'>About</Link></li>
         
               <li className='ml-10 text-small  hover:border-b text-white cursor-pointer'><Link to='/contact'>ContactUs</Link></li>
-          
+           */}
             
              
               {/* <li className='ml-9 text-small uppercase animate-pulse bg-red-600 rounded-[50%] p-2  text-white hover:border-b'><a href="tel:+919365163250">< AiOutlinePhone size={30}/></a></li> */}
@@ -57,7 +61,7 @@ const Navbar = () => {
       'fixed left-[-100%] top-0 p-3 ease-in duration-500'}>
           <div>
             <div className='flex w-full items-center justify-between'>
-              <p className='text-2xl'>JustFlyTicket</p>
+              <p className='text-2xl'>Justflyticket</p>
               <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'>
                 <AiOutlineClose/>
               </div>

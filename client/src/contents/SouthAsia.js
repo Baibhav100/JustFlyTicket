@@ -4,6 +4,7 @@ const southasia=[{
     place:"New Delhi",
     price:"$760",
     image:"https://wallpapercave.com/wp/wp3917571.jpg",
+    deals:"Limited Deals!"
 
 },
 {
@@ -19,7 +20,8 @@ const southasia=[{
     country:"India",
     place:"Hyderabad",
     price:"$774",
-    image:"https://t4.ftcdn.net/jpg/00/47/49/01/360_F_47490128_JLClMTbZyVdxl3OW2m8H4vJHW7hDZ8Jj.jpg"
+    image:"https://t4.ftcdn.net/jpg/00/47/49/01/360_F_47490128_JLClMTbZyVdxl3OW2m8H4vJHW7hDZ8Jj.jpg",
+    deals:"Limited Deals!"
 
 },
 {
@@ -27,7 +29,8 @@ const southasia=[{
     country:"Pakistan",
     place:"Lahore",
     price:"$735",
-    image:"https://c4.wallpaperflare.com/wallpaper/358/17/110/mosque-lahore-pakistan-architecture-wallpaper-preview.jpg"
+    image:"https://c4.wallpaperflare.com/wallpaper/358/17/110/mosque-lahore-pakistan-architecture-wallpaper-preview.jpg",
+    deals:"Limited Deals!"
 
 
 },
@@ -53,7 +56,8 @@ const southasia=[{
     country:"India",
     place:"Chennai",
     price:"$715",
-    image:"https://c0.wallpaperflare.com/preview/619/999/740/chennai-india-building-chennai-beach.jpg"
+    image:"https://c0.wallpaperflare.com/preview/619/999/740/chennai-india-building-chennai-beach.jpg",
+    deals:"Limited Deals!"
 
 },
 {

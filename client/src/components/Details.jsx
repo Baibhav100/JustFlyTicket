@@ -200,7 +200,16 @@ const Details = ({trip1, searchTerm ,suggestions ,startDate, setstartdate, endDa
 
      
         <button type="submit" onClick={sendemail1} className="bg-[#1f2937] w-[100%] text-white py-2 px-4 rounded-md hover:bg-[#1f2937]/90 transition">Book</button>
-        <Pop2 alphanumericCode={alphanumericCode} isOpen={isEmailSent} onClose={closeModal}/>
+        <Pop2 
+          email={email}
+          user={user}
+          num={num}
+          trip1={trip1}
+          startDate={startDate}
+          endDate={endDate}
+          searchTerm={searchTerm}
+          dsearchTerm={dsearchTerm}
+        alphanumericCode={alphanumericCode} isOpen={isEmailSent} onClose={closeModal}/>
       </form>
    </div>
     </div>
