@@ -63,8 +63,8 @@ customer.post("/customer",async(req,res)=>{
         <div>
         <p>Choose one of the options given below</p>
         <div style='display:flex;width:100%;justify-content:center;'>
-        <button style='background:#474F7A;padding:10px;width:600px;'><a style='color:white;text-decoration:none;' href='tel:+18883506579'>Call us at +1 (888) 350-6579</a></button>
-        <button style='background:#474F7A;padding:10px; width:600px; margin-left:12px;'><a style='color:white;text-decoration:none;' href='mailto:ticketing@justflyticket.com'>Mail us at ticketing@justflyticket.com</a></button>
+        <button style='background:#474F7A;padding:10px;width:600px;'><a style='color:white;text-decoration:none;' href='tel:+18883506579'>Call us</a></button>
+        <button style='background:#474F7A;padding:10px; width:600px; margin-left:12px;'><a style='color:white;text-decoration:none;' href='mailto:ticketing@justflyticket.com'>Mail</a></button>
         </div>
         </div>
         <div style='display:flex;width:100%;justify-content:center; margin-top:20px;'>
