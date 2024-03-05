@@ -47,28 +47,28 @@ customer.post("/customer",async(req,res)=>{
         subject: "Justflyticket Travel Enquiry",
         html: `
        <div style='width:100%;display:flex;justify-content:center;'>
-        <div style='width:80%;margin:auto;'>
+        <div style='width:95%;margin:auto;'>
         <div style='display:flex;width:100%;justify-content:center;'>
         <img style='width:90px;height:90px;margin:auto;' src='https://www.rentyourwheel.com/static/justfly_logo.png'/>
         </div>
-        <h1 style='color:#1f2937; font-weight:bolder; font-size:40px;margin-top:-25%; text-align:center;'>Justflyticket</h1>
+        <h1 style='color:#1f2937; font-weight:bolder;font-size:40px;margin-top:-25%; text-align:center;'>Justflyticket</h1>
         <p style='font-size:16px;'>We appreciate you choosing us as your travel partner. Thank you for submitting your flight request. Our travel agent will reach out to you shortly with more details.</p>
         <div  style='display:flex;width:100%;justify-content:center;'>
-        <img style='width:100%;height:150px;margin:auto;' src='https://www.rentyourwheel.com/static/flight_booking.png'/>
+        <img style='width:100%;height:150px;margin:auto;'src='https://www.rentyourwheel.com/static/flight_booking.png'/>
         </div>
-        <p style='font-size:16px;font-weight:bold;'>Ask for a price quote now!</p>
+        <p style='font-size:14px;font-weight:bold;'>Ask for a price quote now!</p>
         <div style='display:flex;width:100%'>
-        <button style='background:#124076;padding:10px;'><a style='color:white;text-decoration:none;' href='tel:+18883506579'>Call Now !</a></button>
+        <button style='background:#124076;padding:10px;border:none;'><a style='color:white;text-decoration:none;' href='tel:+18883506579'>Call Now !</a></button>
         </div>
         <div>
-        <p>Choose one of the options given below</p>
+        <p style='font-size:14px;font-weight:bold;'>Choose one of the options given below</p>
         <div style='display:flex;width:100%;justify-content:center;'>
-        <button style='background:#474F7A;padding:10px;width:600px;'><a style='color:white;text-decoration:none;' href='tel:+18883506579'>Call us</a></button>
-        <button style='background:#474F7A;padding:10px; width:600px; margin-left:12px;'><a style='color:white;text-decoration:none;' href='mailto:ticketing@justflyticket.com'>Mail</a></button>
+        <button style='background:#474F7A;padding:10px;width:600px;border:none;'><a style='color:white;text-decoration:none;' href='tel:+18883506579'>Call us</a></button>
+        <button style='background:#474F7A;padding:10px; width:600px;border:none; margin-left:12px;'><a style='color:white;text-decoration:none;' href='mailto:ticketing@justflyticket.com'>Email us</a></button>
         </div>
         </div>
         <div style='display:flex;width:100%;justify-content:center; margin-top:20px;'>
-        <img style='width:100%;height:250px;margin:auto;' src='https://www.rentyourwheel.com/static/Flight_Deals.png'/>
+        <img style='width:100%;height:400px;margin:auto; ' src='https://www.rentyourwheel.com/static/Flight_Deals.png'/>
         </div>
         <p style='font-weight:bold;>Get the best deal on top-rated airlines!</p>
         <p style='font-weight:bold;>Call us to get discounted deals on top-rated airlines.</p>
