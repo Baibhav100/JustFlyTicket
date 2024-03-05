@@ -52,7 +52,7 @@ customer.post("/customer",async(req,res)=>{
         <img style='width:90px;height:90px;margin:auto;' src='https://www.rentyourwheel.com/static/justfly_logo.png'/>
         </div>
         <h1 style='color:#1f2937; font-weight:bolder; font-size:40px;margin-top:-25%; text-align:center;'>Justflyticket</h1>
-        <p style='font-size:14px;'>We appreciate you choosing us as your travel partner. Thank you for submitting your flight request. Our travel agent will reach out to you shortly with more details.</p>
+        <p style='font-size:16px;'>We appreciate you choosing us as your travel partner. Thank you for submitting your flight request. Our travel agent will reach out to you shortly with more details.</p>
         <div  style='display:flex;width:100%;justify-content:center;'>
         <img style='width:100%;height:150px;margin:auto;' src='https://www.rentyourwheel.com/static/flight_booking.png'/>
         </div>
