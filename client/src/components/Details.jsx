@@ -45,6 +45,7 @@ const Details = ({trip1, searchTerm ,suggestions ,startDate, setstartdate, endDa
           startDate,endDate,
           searchTerm,
           dsearchTerm,
+          passenger,
          })
       });
       console.log(res);
