@@ -57,17 +57,17 @@
         <h3 style='text-align:center;font-size:24px;font-weight:bold;'>${user}</h3>
         <h2 style='text-align:center; padding:10px;'>Reference Number:<b>${alphanumericCode}</b></h2>
         <div style='display:flex;justify-content:center;width:100%'>
-        <div style='width:600px ; height:300px;margin-top:23px; border-radius:3%;padding:20px;background:#351d98;'>
+        <div style='width:600px ;height:300px;margin-top:23px; border-radius:3%;padding:20px;background:#351d98;'>
         <div style='width:100%;display:flex;justify-content:space-around;align-items:center;'>
         <div style='width:200px;display:flex-col;justify-content:center;align-items:center; text-align:center'>
         <h2 style='color:white;font-size:45px;font-weight:bolder''>${searchTerm.slice(0,3)}</h2>
-        <h2 style='color:white;font-size:14px;'>${searchTerm.slice(4,60)}</h2>
+        <h2 style='color:white;font-size:14px;margin-top:10px;'>${searchTerm.slice(4,60)}</h2>
 
         </div>
         <p style='color:white;'>To</p>
         <div style='width:300px;display:flex-col;justify-content:center;align-items:center; text-align:center'>
         <h2 style='color:white;font-size:45px;font-weight:bolder'>${dsearchTerm.slice(0,3)}</h2>
-        <h2 style='color:white;font-size:14px;'>${dsearchTerm.slice(4,60)}</h2>
+        <h2 style='color:white;font-size:14px;margin-top:10px;'>${dsearchTerm.slice(4,60)}</h2>
 
         </div>
         </div>

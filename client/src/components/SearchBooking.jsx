@@ -73,8 +73,8 @@ const SearchBooking = forwardRef((
     <input
       type="radio"
       name="selectOptions"
-      value="oneway"
-      checked={trip1 === "oneway"}
+      value="Oneway"
+      checked={trip1 === "Oneway"}
       onChange={handletrip1}
       className="mr-1 font-bold form-radio text-2xl"
     />
@@ -85,8 +85,8 @@ const SearchBooking = forwardRef((
     <input
       type="radio"
       name="selectOptions"
-      value="roundtrip"
-      checked={trip1 === "roundtrip"}
+      value="Roundtrip"
+      checked={trip1 === "Roundtrip"}
       onChange={handletrip1}
       className="mr-1 font-bold form-radio text-2xl"
     />
