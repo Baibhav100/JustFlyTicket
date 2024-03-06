@@ -91,7 +91,7 @@ const Details = ({trip1, searchTerm ,suggestions ,startDate, setstartdate, endDa
   
 <div className=' lg:flex lg:w-[80%] justify-center lg:justify-between gap-20'>
 <div className=' text-center items-center mt-4'>
-        <div className='rounded-xl mt-[-40px]  bg-green-800/70 text-white p-[10px]'>
+        <div className='rounded-xl mt-[-40px]  bg-[#00478a] text-white p-[10px]'>
           Call for 24/7 Assistance - +1 (888) 350-6579
         </div>
         {/* <img className='W-[420px] h-[430px] transform transition duration-500 hover:scale-110'src={require('../images/traveling.png')} alt="" /> */}

@@ -119,7 +119,7 @@ const dhandleSelectSuggestion = (dselectedTerm) => {
     dhandleInputChange={dhandleInputChange} handleInputChange={handleInputChange}
     />}/>
     
-    <Route path='/loading' element={<Loading/>}/>
+    <Route path='/loading' element={<Loading trip1={trip1} startDate={startDate} endDate={endDate} searchTerm={searchTerm} dsearchTerm={dsearchTerm}/>}/>
     <Route path='/termsconditions' element={<TermsCondition/>}/>
     <Route path='/flightdeals' element={<FlightDeals/>}/>
     <Route path='/privacy' element={<Privacy/>}/>
