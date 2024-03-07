@@ -50,18 +50,42 @@ customer.post("/customer",async(req,res)=>{
         to: email,
         subject: "Justflyticket Travel Enquiry",
         html: `
-        <div style='width:100%;display:flex;justify-content:center;'>
+       <div style='width:100%;display:flex;justify-content:center;'>
         <div style='width:95%;margin:auto;'>
-        <div style='display:flex;width:100%;justify-content:center;'>
-        <img style='width:90px;height:90px;margin:auto;' src='https://www.rentyourwheel.com/static/justfly_logo.png'/>
+        <div style='width:100%;'>
+        <table style='width:100%;'>
+        <tbody>
+          <tr>
+            <td style='text-align:right;width:33%;'>
+            <img style='width:50px;height:50px;' src='https://www.rentyourwheel.com/static/justfly_logo.png'/>
+            </td>
+            <td style='text-align:left;width:50%;'>
+            <h1 style='color:#1f2937; font-weight:bolder;font-size:40px;margin-top:-25%;'>Justflyticket</h1></td>
+          </tr>
+        </tbody>
+      </table>
         </div>
-        <h1 style='color:#1f2937; font-weight:bolder;font-size:40px;margin-top:-25%; text-align:center;'>Justflyticket</h1>
+        
         <p style='font-size:16px;'>We appreciate you choosing us as your travel partner. Thank you for submitting your flight request. Our travel agent will reach out to you shortly with more details.</p>
-        <div style='width:100%;height:400px;background:'>
+        <div style='width:100%;'>
+        <table style="width: 100%;padding:20px; background-color:#124076;color:white;margin-bottom:10px;border-radius: 10px;">
+        <thead>
+          <tr>
+            <th style='text-align:left;'>${trip1}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style='font-size:18px;font-weight:bold;'>${searchTerm.slice(4,65)}(${searchTerm.slice(0,3)})</td>
+            <td style='text-align:right;font-size:18px;font-weight:bold;'>${dsearchTerm.slice(4,65)}(${dsearchTerm.slice(0,3)})</td>
+          </tr>
+        </tbody>
+      </table>
+    
         
         </div>
-        <div style='width:100%;display:flex;justify-content:center;'>
-        <img style='height:auto; width:inherit; margin:auto;'src='https://www.rentyourwheel.com/static/booking_justfly.png'/>
+        <div  style='display:flex;width:100%;justify-content:center;'>
+        <img style='width:100%;margin:auto;'src='https://www.rentyourwheel.com/static/flight_booking.png'/>
         </div>
         <p style='font-size:14px;font-weight:bold;'>Ask for a price quote now!</p>
         <div style='display:flex;width:100%'>
@@ -70,12 +94,12 @@ customer.post("/customer",async(req,res)=>{
         <div>
         <p style='font-size:14px;font-weight:bold;'>Choose one of the options given below</p>
         <div style='display:flex;width:100%;justify-content:center;'>
-       <button style='background:#474F7A;padding:10px;width:300px;border:none;'><a style='color:white;text-decoration:none;' href='tel:+18883506579'>Call us</a></button>
-       <button style='background:#474F7A;padding:10px; width:300px;border:none; margin-left:12px;'><a style='color:white;text-decoration:none;' href='mailto:ticketing@justflyticket.com'>Email us</a></button>
+        <button style='background:#474F7A;padding:10px;width:600px;border:none;'><a style='color:white;text-decoration:none;' href='tel:+18883506579'>Call us</a></button>
+        <button style='background:#474F7A;padding:10px; width:600px;border:none; margin-left:12px;'><a style='color:white;text-decoration:none;' href='mailto:ticketing@justflyticket.com'>Email us</a></button>
         </div>
         </div>
         <div style='display:flex;width:100%;justify-content:center; margin-top:20px;'>
-        <img style='width:100%;height:auto;margin:auto;'src='https://www.rentyourwheel.com/static/Flight_Deals.png'/>
+        <img style='width:100%;margin:auto; ' src='https://www.rentyourwheel.com/static/Flight_Deals.png'/>
         </div>
         <p style='font-weight:bold;>Get the best deal on top-rated airlines!</p>
         <p style='font-weight:bold;>Call us to get discounted deals on top-rated airlines.</p>
@@ -89,7 +113,6 @@ customer.post("/customer",async(req,res)=>{
        </div>
         `
     };
-
     // Send the first email
     const info1 = await transporter.sendMail(mailOptions1);
 

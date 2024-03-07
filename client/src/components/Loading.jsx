@@ -17,7 +17,7 @@ const Loading = ({trip1,startDate,endDate,searchTerm,dsearchTerm}) => {
 useEffect(()=>{
   if (redirect)
   {
-    // navigate('/details');
+    navigate('/details');
   }
 },[redirect,navigate]);
   return (
